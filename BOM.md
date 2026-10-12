@@ -12,13 +12,12 @@
 
 | Part | What it's for | Qty | Unit | Total | Vendor |
 | --- | --- | --- | --- | --- | --- |
-| [ESP32-C3](https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html) | Microcontroller Unit | 1 | $5.00 | $5.00 | [Seeed Studio](https://www.seeedstudio.com/Seeed-XIAO-ESP32C3-p-5431.html) |
 | [0.96" OLED](https://lilygo.cc/en-us/products/0-96-inch-oled?srsltid=AU7gw4Xo0LLGcPhCm15p2THvICLGoL9e_kzYmc6CCDenfcRfcfp3CDCZ) | Display | 1 | $2.50 | $2.50 | [LilyGo](https://lilygo.cc/en-us/products/0-96-inch-oled?srsltid=AU7gw4Xo0LLGcPhCm15p2THvICLGoL9e_kzYmc6CCDenfcRfcfp3CDCZ) |
 | [DHT11](https://www.adafruit.com/product/386?srsltid=AU7gw4UjzMGeLMIzODNCHf76YzeZTfT2tLIA2TnPeSra5yNevl4yPcj8) | Temperature/Humidity Sensor | 1 | $5.00 | $5.00 | [Adafruit](https://www.adafruit.com/product/386?srsltid=AU7gw4UjzMGeLMIzODNCHf76YzeZTfT2tLIA2TnPeSra5yNevl4yPcj8) |
 | [PCB](https://jlcpcb.com) | Circuit Board | 1 | $10.00 | $10.00 | [JLCPCB](https://jlcpcb.com) |
 | [10k Resistor](https://www.jameco.com/z/CF1W103JRC-Jameco-ValuePro-Resistor-Carbon-Film-10k-Ohm-1-Watt-5-_2237221.html?srsltid=AU7gw4XiPCAGHETYphiDBG9AbXly-vLFmRCPhLZG59gjwPFWarAGbRCLcUg) | Resistor | 1 | $0.14 | $0.14 | [Jameco](https://www.jameco.com/z/CF1W103JRC-Jameco-ValuePro-Resistor-Carbon-Film-10k-Ohm-1-Watt-5-_2237221.html?srsltid=AU7gw4XiPCAGHETYphiDBG9AbXly-vLFmRCPhLZG59gjwPFWarAGbRCLcUg) |
-| **Parts subtotal** | — | — | — | **$22.64** | — |
+| **Parts subtotal** | — | — | — | **$17.64** | — |
 | **Tax & shipping** | — | — | — | **$0.00** | — |
-| **Total** | — | — | — | **$22.64** | — |
+| **Total** | — | — | — | **$17.64** | — |
 
-$7.36 left of the tier's funding.
+$12.36 left of the tier's funding.
