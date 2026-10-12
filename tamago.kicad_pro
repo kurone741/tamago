@@ -69,7 +69,13 @@
           "thermal_relief_spoke_width": 0.5
         }
       },
-      "diff_pair_dimensions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
       "drc_exclusions": [],
       "meta": {
         "version": 2
@@ -206,7 +212,10 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [],
+      "track_widths": [
+        0.0,
+        1.0
+      ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
           "corner_radius_percentage": 80,
@@ -233,7 +242,12 @@
           "spacing": 0.6
         }
       },
-      "via_dimensions": [],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        }
+      ],
       "zones_allow_external_fillets": false
     },
     "ipc2581": {
@@ -492,7 +506,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "omi.kicad_pro",
+    "filename": "tamago.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -541,7 +555,7 @@
       "method": 0,
       "sort_order": 0
     },
-    "bom_export_filename": "${PROJECTNAME}.csv",
+    "bom_export_filename": "BOM.csv",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
       "field_delimiter": ",",
@@ -615,12 +629,24 @@
           "label": "Datasheet",
           "name": "Datasheet",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "#",
+          "name": "${ITEM_NUMBER}",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Description",
+          "name": "Description",
+          "show": false
         }
       ],
       "filter_string": "",
       "group_symbols": true,
       "include_excluded_from_bom": true,
-      "name": "Default Editing",
+      "name": "",
       "sort_asc": true,
       "sort_field": "Reference"
     },
@@ -668,8 +694,8 @@
     "subpart_id_separator": 0,
     "top_level_sheets": [
       {
-        "filename": "omi.kicad_sch",
-        "name": "",
+        "filename": "tamago.kicad_sch",
+        "name": "tamago",
         "uuid": "9a04299f-22f1-438c-bcd2-817ae73ebab1"
       }
     ],
@@ -679,7 +705,7 @@
   "sheets": [
     [
       "9a04299f-22f1-438c-bcd2-817ae73ebab1",
-      ""
+      "tamago"
     ]
   ],
   "text_variables": {},

@@ -5319,7 +5319,7 @@
 			(uuid "8923dc1e-0ea1-463f-92ef-686f79ac4379")
 		)
 		(instances
-			(project "omi"
+			(project "tamago"
 				(path "/9a04299f-22f1-438c-bcd2-817ae73ebab1"
 					(reference "J4")
 					(unit 1)
@@ -5398,7 +5398,7 @@
 			(uuid "ded0aea8-c593-4a95-9827-56b82a01b1e3")
 		)
 		(instances
-			(project "omi"
+			(project "tamago"
 				(path "/9a04299f-22f1-438c-bcd2-817ae73ebab1"
 					(reference "#PWR013")
 					(unit 1)
@@ -5480,7 +5480,7 @@
 			(uuid "6705d297-7597-46a5-bb4e-c22d7c2e0bba")
 		)
 		(instances
-			(project "omi"
+			(project "tamago"
 				(path "/9a04299f-22f1-438c-bcd2-817ae73ebab1"
 					(reference "SW1")
 					(unit 1)
@@ -5558,7 +5558,7 @@
 			(uuid "99b77de0-0339-4220-ae9d-af2d03909e05")
 		)
 		(instances
-			(project "omi"
+			(project "tamago"
 				(path "/9a04299f-22f1-438c-bcd2-817ae73ebab1"
 					(reference "#PWR04")
 					(unit 1)
@@ -5636,7 +5636,7 @@
 			(uuid "530adb72-dc1f-4626-83da-4d7615fd35c1")
 		)
 		(instances
-			(project "omi"
+			(project "tamago"
 				(path "/9a04299f-22f1-438c-bcd2-817ae73ebab1"
 					(reference "#PWR07")
 					(unit 1)
@@ -5714,7 +5714,7 @@
 			(uuid "410d322b-c790-4dd6-aeab-e6f7faf61edb")
 		)
 		(instances
-			(project "omi"
+			(project "tamago"
 				(path "/9a04299f-22f1-438c-bcd2-817ae73ebab1"
 					(reference "#PWR016")
 					(unit 1)
@@ -5801,7 +5801,7 @@
 			(uuid "79c5c7e9-c590-4e5f-b53e-979f935b0510")
 		)
 		(instances
-			(project "omi"
+			(project "tamago"
 				(path "/9a04299f-22f1-438c-bcd2-817ae73ebab1"
 					(reference "U3")
 					(unit 1)
@@ -5883,7 +5883,7 @@
 			(uuid "f56d85ce-b582-4868-aff9-919f864d539d")
 		)
 		(instances
-			(project "omi"
+			(project "tamago"
 				(path "/9a04299f-22f1-438c-bcd2-817ae73ebab1"
 					(reference "C4")
 					(unit 1)
@@ -5961,7 +5961,7 @@
 			(uuid "c88a3afd-8668-41b6-8ff6-f7e17720bdde")
 		)
 		(instances
-			(project "omi"
+			(project "tamago"
 				(path "/9a04299f-22f1-438c-bcd2-817ae73ebab1"
 					(reference "#PWR02")
 					(unit 1)
@@ -6039,7 +6039,7 @@
 			(uuid "c0be7025-74e2-49b6-b589-5907ec9721eb")
 		)
 		(instances
-			(project "omi"
+			(project "tamago"
 				(path "/9a04299f-22f1-438c-bcd2-817ae73ebab1"
 					(reference "#PWR08")
 					(unit 1)
@@ -6116,7 +6116,7 @@
 			(uuid "5d16b1ce-3343-4e4b-884c-4eb2d9ca39fe")
 		)
 		(instances
-			(project "omi"
+			(project "tamago"
 				(path "/9a04299f-22f1-438c-bcd2-817ae73ebab1"
 					(reference "#PWR010")
 					(unit 1)
@@ -6195,7 +6195,7 @@
 			(uuid "b298bc09-7f44-4b6c-8853-c68536f55ec5")
 		)
 		(instances
-			(project "omi"
+			(project "tamago"
 				(path "/9a04299f-22f1-438c-bcd2-817ae73ebab1"
 					(reference "#PWR012")
 					(unit 1)
@@ -6273,7 +6273,7 @@
 			(uuid "06385627-b0c2-4df7-8cb9-27fa6c8bde1b")
 		)
 		(instances
-			(project "omi"
+			(project "tamago"
 				(path "/9a04299f-22f1-438c-bcd2-817ae73ebab1"
 					(reference "#PWR015")
 					(unit 1)
@@ -6352,7 +6352,7 @@
 			(uuid "e3a3d26f-f6c7-4a98-bb92-890e91b3831a")
 		)
 		(instances
-			(project "omi"
+			(project "tamago"
 				(path "/9a04299f-22f1-438c-bcd2-817ae73ebab1"
 					(reference "#PWR011")
 					(unit 1)
@@ -6432,7 +6432,7 @@
 			(uuid "c352b337-6a51-446a-b2dd-5bd2ec382b45")
 		)
 		(instances
-			(project "omi"
+			(project "tamago"
 				(path "/9a04299f-22f1-438c-bcd2-817ae73ebab1"
 					(reference "C1")
 					(unit 1)
@@ -6521,7 +6521,7 @@
 			(uuid "685c62b4-df0d-4857-8fb9-769c9ec5ec09")
 		)
 		(instances
-			(project "omi"
+			(project "tamago"
 				(path "/9a04299f-22f1-438c-bcd2-817ae73ebab1"
 					(reference "U1")
 					(unit 1)
@@ -6603,7 +6603,7 @@
 			(uuid "38e39949-c574-4ddc-8c9b-a45e8e624f2a")
 		)
 		(instances
-			(project "omi"
+			(project "tamago"
 				(path "/9a04299f-22f1-438c-bcd2-817ae73ebab1"
 					(reference "R1")
 					(unit 1)
@@ -6681,7 +6681,7 @@
 			(uuid "fae638c1-d3f6-4f23-b230-76b61be8e2a9")
 		)
 		(instances
-			(project "omi"
+			(project "tamago"
 				(path "/9a04299f-22f1-438c-bcd2-817ae73ebab1"
 					(reference "#PWR03")
 					(unit 1)
@@ -6759,7 +6759,7 @@
 			(uuid "e93dabf8-f436-4651-999f-db2443ffb225")
 		)
 		(instances
-			(project "omi"
+			(project "tamago"
 				(path "/9a04299f-22f1-438c-bcd2-817ae73ebab1"
 					(reference "#PWR09")
 					(unit 1)
@@ -6837,7 +6837,7 @@
 			(uuid "59e593aa-d6e0-4f39-9c44-1f9a245bbcfb")
 		)
 		(instances
-			(project "omi"
+			(project "tamago"
 				(path "/9a04299f-22f1-438c-bcd2-817ae73ebab1"
 					(reference "#PWR01")
 					(unit 1)
@@ -6919,7 +6919,7 @@
 			(uuid "0acfcbd5-ab7d-4333-bac3-0e453280ef20")
 		)
 		(instances
-			(project "omi"
+			(project "tamago"
 				(path "/9a04299f-22f1-438c-bcd2-817ae73ebab1"
 					(reference "C3")
 					(unit 1)
@@ -7004,7 +7004,7 @@
 			(uuid "40081a89-7be0-45f1-8494-6e21ae286991")
 		)
 		(instances
-			(project "omi"
+			(project "tamago"
 				(path "/9a04299f-22f1-438c-bcd2-817ae73ebab1"
 					(reference "J2")
 					(unit 1)
@@ -7238,7 +7238,7 @@
 			(uuid "3f9f4d3e-22ba-4976-b765-c8e3c4ed4fa3")
 		)
 		(instances
-			(project "omi"
+			(project "tamago"
 				(path "/9a04299f-22f1-438c-bcd2-817ae73ebab1"
 					(reference "U2")
 					(unit 1)
@@ -7317,7 +7317,7 @@
 			(uuid "eccf7299-0db7-4922-bbc7-b87d58d9622d")
 		)
 		(instances
-			(project "omi"
+			(project "tamago"
 				(path "/9a04299f-22f1-438c-bcd2-817ae73ebab1"
 					(reference "#FLG03")
 					(unit 1)
@@ -7442,7 +7442,7 @@
 			(uuid "b2960b37-8ce4-4b43-afdf-6fc34aa60c8e")
 		)
 		(instances
-			(project "omi"
+			(project "tamago"
 				(path "/9a04299f-22f1-438c-bcd2-817ae73ebab1"
 					(reference "J1")
 					(unit 1)
@@ -7520,7 +7520,7 @@
 			(uuid "f05168d3-7adb-49a4-add3-686eea4285f2")
 		)
 		(instances
-			(project "omi"
+			(project "tamago"
 				(path "/9a04299f-22f1-438c-bcd2-817ae73ebab1"
 					(reference "#FLG01")
 					(unit 1)
@@ -7602,7 +7602,7 @@
 			(uuid "e3e8acfb-f550-4d8e-a50e-dc34c196f248")
 		)
 		(instances
-			(project "omi"
+			(project "tamago"
 				(path "/9a04299f-22f1-438c-bcd2-817ae73ebab1"
 					(reference "R4")
 					(unit 1)
@@ -7681,7 +7681,7 @@
 			(uuid "06a8e7b9-1bdb-42f8-b4c0-e915c50c970d")
 		)
 		(instances
-			(project "omi"
+			(project "tamago"
 				(path "/9a04299f-22f1-438c-bcd2-817ae73ebab1"
 					(reference "#PWR06")
 					(unit 1)
@@ -7763,7 +7763,7 @@
 			(uuid "5d72fe3d-043a-4a91-bf56-51cde7e557bb")
 		)
 		(instances
-			(project "omi"
+			(project "tamago"
 				(path "/9a04299f-22f1-438c-bcd2-817ae73ebab1"
 					(reference "R3")
 					(unit 1)
@@ -7851,7 +7851,7 @@
 			(uuid "fd965387-465a-45e6-a8a5-f6f03e326626")
 		)
 		(instances
-			(project "omi"
+			(project "tamago"
 				(path "/9a04299f-22f1-438c-bcd2-817ae73ebab1"
 					(reference "J3")
 					(unit 1)
@@ -7929,7 +7929,7 @@
 			(uuid "fd35cd73-9d82-4d10-bea9-6cebf3748f62")
 		)
 		(instances
-			(project "omi"
+			(project "tamago"
 				(path "/9a04299f-22f1-438c-bcd2-817ae73ebab1"
 					(reference "#PWR05")
 					(unit 1)
@@ -8009,7 +8009,7 @@
 			(uuid "61a875fc-780d-403e-9c17-7e7071693197")
 		)
 		(instances
-			(project "omi"
+			(project "tamago"
 				(path "/9a04299f-22f1-438c-bcd2-817ae73ebab1"
 					(reference "SW2")
 					(unit 1)
@@ -8091,7 +8091,7 @@
 			(uuid "c1433ae3-fa24-422a-ac05-ad5351bdb211")
 		)
 		(instances
-			(project "omi"
+			(project "tamago"
 				(path "/9a04299f-22f1-438c-bcd2-817ae73ebab1"
 					(reference "C2")
 					(unit 1)
@@ -8169,7 +8169,7 @@
 			(uuid "4fb41f3a-9205-4431-bf2b-e5c24e0ad48b")
 		)
 		(instances
-			(project "omi"
+			(project "tamago"
 				(path "/9a04299f-22f1-438c-bcd2-817ae73ebab1"
 					(reference "#PWR014")
 					(unit 1)
