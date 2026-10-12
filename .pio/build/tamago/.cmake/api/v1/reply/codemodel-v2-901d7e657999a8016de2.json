@@ -3025,7 +3025,7 @@
 				{
 					"directoryIndex" : 13,
 					"id" : "__idf_esp_app_format::@08c2bdce7fd85cdbea06",
-					"jsonFile" : "target-__idf_esp_app_format-7dc15124fd86d8922257.json",
+					"jsonFile" : "target-__idf_esp_app_format-016c923cbc971fba06fa.json",
 					"name" : "__idf_esp_app_format",
 					"projectIndex" : 1
 				},
@@ -3606,7 +3606,7 @@
 				{
 					"directoryIndex" : 168,
 					"id" : "__idf_src::@2478b13de56d3028f688",
-					"jsonFile" : "target-__idf_src-c1298414fc8e154aa939.json",
+					"jsonFile" : "target-__idf_src-a489110584e1f874fc2c.json",
 					"name" : "__idf_src",
 					"projectIndex" : 1
 				},
@@ -3998,7 +3998,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "tamago.elf::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-tamago.elf-d2264c72b6f80f0093ec.json",
+					"jsonFile" : "target-tamago.elf-e4bf6d155b69935420cf.json",
 					"name" : "tamago.elf",
 					"projectIndex" : 0
 				},

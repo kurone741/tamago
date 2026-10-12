@@ -5491,6 +5491,54 @@
     {
         "children": [
             {
+                "children": [],
+                "depends_on": null,
+                "help": null,
+                "id": "CLOCK_WIFI_SSID",
+                "name": "CLOCK_WIFI_SSID",
+                "range": null,
+                "title": "Wi-Fi SSID (empty = no Wi-Fi, manual time only)",
+                "type": "string"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": null,
+                "id": "CLOCK_WIFI_PASSWORD",
+                "name": "CLOCK_WIFI_PASSWORD",
+                "range": null,
+                "title": "Wi-Fi password (empty = open network)",
+                "type": "string"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": null,
+                "id": "CLOCK_NTP_SERVER",
+                "name": "CLOCK_NTP_SERVER",
+                "range": null,
+                "title": "NTP server",
+                "type": "string"
+            },
+            {
+                "children": [],
+                "depends_on": null,
+                "help": "POSIX TZ string, e.g. \"UTC0\" or \"CET-1CEST,M3.5.0,M10.5.0\".\nNote the POSIX sign convention (zones west of UTC are positive).",
+                "id": "CLOCK_TZ",
+                "name": "CLOCK_TZ",
+                "range": null,
+                "title": "POSIX timezone string",
+                "type": "string"
+            }
+        ],
+        "depends_on": null,
+        "id": "clock-settings-src-Kconfig.projbuild-1",
+        "title": "Clock Settings",
+        "type": "menu"
+    },
+    {
+        "children": [
+            {
                 "children": [
                     {
                         "children": [],
@@ -25451,10 +25499,7 @@
                         "help": "This baud rate is used by both the ESP-IDF Bootloader and the app (including\nboot log output and default standard input/output/error of the app).\n\nThe app's maximum baud rate depends on the UART clock source. If Power Management is disabled,\nthe UART clock source is the APB clock and all baud rates in the available range will be sufficiently\naccurate. If Power Management is enabled, REF_TICK clock source is used so the baud rate is divided\nfrom 1MHz. Baud rates above 1Mbps are not possible and values between 500Kbps and 1Mbps may not be\naccurate.\n\nIf the configuration is different in the Bootloader binary compared to the app binary, UART\nis reconfigured after the bootloader exits and the app starts.",
                         "id": "ESP_CONSOLE_UART_BAUDRATE",
                         "name": "ESP_CONSOLE_UART_BAUDRATE",
-                        "range": [
-                            1200,
-                            4000000
-                        ],
+                        "range": null,
                         "title": "UART console baud rate",
                         "type": "int"
                     },

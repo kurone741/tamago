@@ -40,7 +40,6 @@
 			"/home/huangk/.platformio/packages/framework-espidf/components/esp_libc/CMakeLists.txt",
 			"/home/huangk/.platformio/packages/framework-espidf/components/pthread/CMakeLists.txt",
 			"/home/huangk/.platformio/packages/framework-espidf/components/cxx/CMakeLists.txt",
-			"/home/huangk/.platformio/packages/framework-espidf/components/esp_driver_uart/CMakeLists.txt",
 			"/home/huangk/.platformio/packages/framework-espidf/components/nvs_sec_provider/CMakeLists.txt",
 			"/home/huangk/.platformio/packages/framework-espidf/components/esp_driver_usb_serial_jtag/CMakeLists.txt",
 			"/home/huangk/.platformio/packages/framework-espidf/components/vfs/CMakeLists.txt",
@@ -1131,7 +1130,7 @@
 			{
 				"command" : 5,
 				"file" : 19,
-				"line" : 35,
+				"line" : 28,
 				"parent" : 188
 			},
 			{
@@ -1140,7 +1139,13 @@
 			{
 				"command" : 5,
 				"file" : 20,
-				"line" : 28,
+				"line" : 27,
+				"parent" : 190
+			},
+			{
+				"command" : 5,
+				"file" : 20,
+				"line" : 33,
 				"parent" : 190
 			},
 			{
@@ -1149,29 +1154,14 @@
 			{
 				"command" : 5,
 				"file" : 21,
-				"line" : 27,
-				"parent" : 192
+				"line" : 56,
+				"parent" : 193
 			},
 			{
 				"command" : 5,
 				"file" : 21,
-				"line" : 33,
-				"parent" : 192
-			},
-			{
-				"file" : 22
-			},
-			{
-				"command" : 5,
-				"file" : 22,
-				"line" : 56,
-				"parent" : 195
-			},
-			{
-				"command" : 5,
-				"file" : 22,
 				"line" : 59,
-				"parent" : 195
+				"parent" : 193
 			},
 			{
 				"command" : 6,
@@ -1187,9 +1177,9 @@
 			},
 			{
 				"command" : 6,
-				"file" : 23,
+				"file" : 22,
 				"line" : 237,
-				"parent" : 199
+				"parent" : 197
 			},
 			{
 				"command" : 5,
@@ -1728,7 +1718,7 @@
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/esp_hal_mspi/esp32c3/include"
 				},
 				{
-					"backtrace" : 201,
+					"backtrace" : 199,
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/esp_blockdev/include"
 				},
 				{
@@ -1880,11 +1870,11 @@
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/esp_hal_wdt/esp32c3/include"
 				},
 				{
-					"backtrace" : 202,
+					"backtrace" : 200,
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/esp_hal_rtc_timer/include"
 				},
 				{
-					"backtrace" : 202,
+					"backtrace" : 200,
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/esp_hal_rtc_timer/esp32c3/include"
 				},
 				{
@@ -1892,11 +1882,11 @@
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/spi_flash/include"
 				},
 				{
-					"backtrace" : 203,
+					"backtrace" : 201,
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/esp_usb_cdc_rom_console/include"
 				},
 				{
-					"backtrace" : 204,
+					"backtrace" : 202,
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/esp_hal_touch_sens/include"
 				},
 				{
@@ -1928,7 +1918,7 @@
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/esp_driver_gptimer/include"
 				},
 				{
-					"backtrace" : 205,
+					"backtrace" : 203,
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/app_trace/include"
 				},
 				{
@@ -2072,11 +2062,11 @@
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/esp_adc/esp32c3/include"
 				},
 				{
-					"backtrace" : 206,
+					"backtrace" : 204,
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/esp_hal_asrc/include"
 				},
 				{
-					"backtrace" : 207,
+					"backtrace" : 205,
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/esp_asrc_adapter/include"
 				},
 				{
@@ -2084,23 +2074,23 @@
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/esp_blockdev_util/include"
 				},
 				{
-					"backtrace" : 208,
+					"backtrace" : 206,
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/esp_hal_ana_cmpr/include"
 				},
 				{
-					"backtrace" : 209,
+					"backtrace" : 207,
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/esp_driver_ana_cmpr/include"
 				},
 				{
-					"backtrace" : 210,
+					"backtrace" : 208,
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/esp_driver_bitscrambler/include"
 				},
 				{
-					"backtrace" : 211,
+					"backtrace" : 209,
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/esp_hal_cam/include"
 				},
 				{
-					"backtrace" : 212,
+					"backtrace" : 210,
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/esp_driver_isp/include"
 				},
 				{
@@ -2112,15 +2102,15 @@
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/esp_driver_cam/interface"
 				},
 				{
-					"backtrace" : 213,
+					"backtrace" : 211,
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/esp_hal_cordic/include"
 				},
 				{
-					"backtrace" : 214,
+					"backtrace" : 212,
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/esp_driver_cordic/include"
 				},
 				{
-					"backtrace" : 215,
+					"backtrace" : 213,
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/esp_driver_dac/include"
 				},
 				{
@@ -2140,19 +2130,19 @@
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/esp_driver_i2s/include"
 				},
 				{
-					"backtrace" : 216,
+					"backtrace" : 214,
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/esp_hal_i3c/include"
 				},
 				{
-					"backtrace" : 217,
+					"backtrace" : 215,
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/esp_driver_i3c/include"
 				},
 				{
-					"backtrace" : 218,
+					"backtrace" : 216,
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/esp_hal_jpeg/include"
 				},
 				{
-					"backtrace" : 219,
+					"backtrace" : 217,
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/esp_driver_jpeg/include"
 				},
 				{
@@ -2168,35 +2158,35 @@
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/esp_driver_ledc/include"
 				},
 				{
-					"backtrace" : 220,
+					"backtrace" : 218,
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/esp_hal_mcpwm/include"
 				},
 				{
-					"backtrace" : 221,
+					"backtrace" : 219,
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/esp_driver_mcpwm/include"
 				},
 				{
-					"backtrace" : 222,
+					"backtrace" : 220,
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/esp_hal_parlio/include"
 				},
 				{
-					"backtrace" : 223,
+					"backtrace" : 221,
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/esp_driver_parlio/include"
 				},
 				{
-					"backtrace" : 224,
+					"backtrace" : 222,
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/esp_hal_pcnt/include"
 				},
 				{
-					"backtrace" : 225,
+					"backtrace" : 223,
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/esp_driver_pcnt/include"
 				},
 				{
-					"backtrace" : 226,
+					"backtrace" : 224,
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/esp_hal_ppa/include"
 				},
 				{
-					"backtrace" : 227,
+					"backtrace" : 225,
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/esp_driver_ppa/include"
 				},
 				{
@@ -2212,7 +2202,7 @@
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/esp_driver_rmt/include"
 				},
 				{
-					"backtrace" : 228,
+					"backtrace" : 226,
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/esp_hal_sd/include"
 				},
 				{
@@ -2224,7 +2214,7 @@
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/esp_driver_sd_intf/include"
 				},
 				{
-					"backtrace" : 229,
+					"backtrace" : 227,
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/esp_driver_sdio/include"
 				},
 				{
@@ -2232,11 +2222,11 @@
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/esp_driver_sdm/include"
 				},
 				{
-					"backtrace" : 230,
+					"backtrace" : 228,
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/esp_driver_sdmmc/include"
 				},
 				{
-					"backtrace" : 230,
+					"backtrace" : 228,
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/esp_driver_sdmmc/legacy/include"
 				},
 				{
@@ -2252,7 +2242,7 @@
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/esp_driver_twai/include"
 				},
 				{
-					"backtrace" : 231,
+					"backtrace" : 229,
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/esp_hal_emac/include"
 				},
 				{
@@ -2260,11 +2250,11 @@
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/esp_eth/include"
 				},
 				{
-					"backtrace" : 232,
+					"backtrace" : 230,
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/esp_hal_ieee802154/include"
 				},
 				{
-					"backtrace" : 233,
+					"backtrace" : 231,
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/esp_hal_lcd/include"
 				},
 				{
@@ -2348,7 +2338,7 @@
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/fatfs/vfs"
 				},
 				{
-					"backtrace" : 234,
+					"backtrace" : 232,
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/ieee802154/include"
 				},
 				{
@@ -2358,6 +2348,10 @@
 				{
 					"backtrace" : 108,
 					"path" : "/home/huangk/.platformio/packages/framework-espidf/components/spiffs/include"
+				},
+				{
+					"backtrace" : 109,
+					"path" : "/home/huangk/projects/tamago/src"
 				}
 			],
 			"language" : "C",
@@ -2370,11 +2364,11 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 198,
+			"backtrace" : 196,
 			"id" : "_project_elf_src::@6890427a1f51a3e7e1df"
 		},
 		{
-			"backtrace" : 200,
+			"backtrace" : 198,
 			"id" : "__ldgen_output_sections.ld::@6890427a1f51a3e7e1df"
 		},
 		{
@@ -3318,11 +3312,6 @@
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 73,
-				"fragment" : "esp-idf/esp_hal_twai/libesp_hal_twai.a",
-				"role" : "libraries"
-			},
-			{
 				"backtrace" : 80,
 				"fragment" : "esp-idf/esp_driver_i2c/libesp_driver_i2c.a",
 				"role" : "libraries"
@@ -3370,6 +3359,16 @@
 			{
 				"backtrace" : 67,
 				"fragment" : "esp-idf/esp_driver_spi/libesp_driver_spi.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 74,
+				"fragment" : "esp-idf/driver/libdriver.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 73,
+				"fragment" : "esp-idf/esp_hal_twai/libesp_hal_twai.a",
 				"role" : "libraries"
 			},
 			{
@@ -5309,31 +5308,26 @@
 			},
 			{
 				"backtrace" : 189,
-				"fragment" : "-u uart_vfs_include_dev_init",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 191,
 				"fragment" : "-u nvs_sec_provider_include_impl",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 193,
+				"backtrace" : 191,
 				"fragment" : "-u usb_serial_jtag_vfs_include_dev_init",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 194,
+				"backtrace" : 192,
 				"fragment" : "-u usb_serial_jtag_connection_monitor_include",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 196,
+				"backtrace" : 194,
 				"fragment" : "-u vfs_include_syscalls_impl",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 197,
+				"backtrace" : 195,
 				"fragment" : "-u esp_vfs_include_nullfs_register",
 				"role" : "libraries"
 			}

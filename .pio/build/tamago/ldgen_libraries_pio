@@ -187,3 +187,4 @@
 /home/huangk/projects/tamago/.pio/build/tamago/esp-idf/esp_driver_sdspi/libesp_driver_sdspi.a
 /home/huangk/projects/tamago/.pio/build/tamago/esp-idf/rt/librt.a
 /home/huangk/projects/tamago/.pio/build/tamago/esp-idf/spiffs/libspiffs.a
+/home/huangk/projects/tamago/.pio/build/tamago/esp-idf/driver/libdriver.a

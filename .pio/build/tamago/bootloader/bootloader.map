@@ -52,6 +52,8 @@ Archive member included to satisfy reference by file (symbol)
                               .pio/build/tamago/bootloader/esp-idf/efuse/libefuse.a(esp_efuse_fields.c.o) (esp_efuse_read_field_blob)
 .pio/build/tamago/bootloader/esp-idf/esp_bootloader_format/libesp_bootloader_format.a(esp_bootloader_desc.c.o)
                               .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_init.c.o) (esp_bootloader_get_description)
+.pio/build/tamago/bootloader/esp-idf/esp_hal_uart/libesp_hal_uart.a(uart_periph.c.o)
+                              .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_console.c.o) (uart_periph_signal)
 .pio/build/tamago/bootloader/esp-idf/esp_hal_wdt/libesp_hal_wdt.a(wdt_hal_iram.c.o)
                               .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_init.c.o) (wdt_hal_init)
 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(cpu_region_protect.c.o)
@@ -61,7 +63,9 @@ Archive member included to satisfy reference by file (symbol)
 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
                               .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk_init.c.o) (rtc_clk_32k_enable)
 .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_sys.c.o)
-                              .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_console.c.o) (esp_rom_install_uart_printf)
+                              .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_console.c.o) (esp_rom_install_channel_putc)
+.pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_serial_output.c.o)
+                              .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_console.c.o) (esp_rom_output_set_as_console)
 .pio/build/tamago/bootloader/esp-idf/log/liblog.a(log_timestamp.c.o)
                               .pio/build/tamago/bootloader/esp-idf/main/libmain.a(bootloader_start.c.o) (esp_log_timestamp)
 .pio/build/tamago/bootloader/esp-idf/riscv/libriscv.a(rv_utils.c.o)
@@ -81,7 +85,7 @@ Archive member included to satisfy reference by file (symbol)
 /home/huangk/.platformio/packages/toolchain-riscv32-esp/bin/../riscv32-esp-elf/../picolibc/lib/gcc/riscv32-esp-elf/15.2.0/rv32imc_zicsr_zifencei/ilp32/no-rtti/libgcc.a(_popcountsi2.o)
                               .pio/build/tamago/bootloader/esp-idf/efuse/libefuse.a(esp_efuse_fields.c.o) (__popcountsi2)
 /home/huangk/.platformio/packages/toolchain-riscv32-esp/bin/../riscv32-esp-elf/../picolibc/lib/gcc/riscv32-esp-elf/15.2.0/rv32imc_zicsr_zifencei/ilp32/no-rtti/libgcc.a(_udivdi3.o)
-                              .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_console.c.o) (__udivdi3)
+                              .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk_init.c.o) (__udivdi3)
 /home/huangk/.platformio/packages/toolchain-riscv32-esp/bin/../riscv32-esp-elf/../picolibc/lib/gcc/riscv32-esp-elf/15.2.0/rv32imc_zicsr_zifencei/ilp32/no-rtti/libgcc.a(_clz.o)
                               /home/huangk/.platformio/packages/toolchain-riscv32-esp/bin/../riscv32-esp-elf/../picolibc/lib/gcc/riscv32-esp-elf/15.2.0/rv32imc_zicsr_zifencei/ilp32/no-rtti/libgcc.a(_udivdi3.o) (__clz_tab)
 /home/huangk/.platformio/packages/toolchain-riscv32-esp/bin/../riscv32-esp-elf/../picolibc/riscv32-esp-elf/lib/rv32imc_zicsr_zifencei/ilp32/no-rtti/libc.a(memcpy-asm.S.o)
@@ -1217,6 +1221,9 @@ Discarded input sections
  .text          0x00000000        0x0 .pio/build/tamago/bootloader/esp-idf/esp_bootloader_format/libesp_bootloader_format.a(esp_bootloader_desc.c.o)
  .data          0x00000000        0x0 .pio/build/tamago/bootloader/esp-idf/esp_bootloader_format/libesp_bootloader_format.a(esp_bootloader_desc.c.o)
  .bss           0x00000000        0x0 .pio/build/tamago/bootloader/esp-idf/esp_bootloader_format/libesp_bootloader_format.a(esp_bootloader_desc.c.o)
+ .text          0x00000000        0x0 .pio/build/tamago/bootloader/esp-idf/esp_hal_uart/libesp_hal_uart.a(uart_periph.c.o)
+ .data          0x00000000        0x0 .pio/build/tamago/bootloader/esp-idf/esp_hal_uart/libesp_hal_uart.a(uart_periph.c.o)
+ .bss           0x00000000        0x0 .pio/build/tamago/bootloader/esp-idf/esp_hal_uart/libesp_hal_uart.a(uart_periph.c.o)
  .text          0x00000000        0x0 .pio/build/tamago/bootloader/esp-idf/esp_hal_wdt/libesp_hal_wdt.a(wdt_hal_iram.c.o)
  .data          0x00000000        0x0 .pio/build/tamago/bootloader/esp-idf/esp_hal_wdt/libesp_hal_wdt.a(wdt_hal_iram.c.o)
  .bss           0x00000000        0x0 .pio/build/tamago/bootloader/esp-idf/esp_hal_wdt/libesp_hal_wdt.a(wdt_hal_iram.c.o)
@@ -1271,13 +1278,13 @@ Discarded input sections
  .text          0x00000000        0x0 .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_sys.c.o)
  .data          0x00000000        0x0 .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_sys.c.o)
  .bss           0x00000000        0x0 .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_sys.c.o)
- .text.esp_rom_output_noop
-                0x00000000        0x2 .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_sys.c.o)
  .text.esp_rom_output_to_channels
                 0x00000000       0x30 .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_sys.c.o)
- .text.esp_rom_install_channel_putc
-                0x00000000       0x32 .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_sys.c.o)
- .sdata._putc2  0x00000000        0x4 .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_sys.c.o)
+ .text.esp_rom_install_uart_printf
+                0x00000000       0x2a .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_sys.c.o)
+ .text          0x00000000        0x0 .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_serial_output.c.o)
+ .data          0x00000000        0x0 .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_serial_output.c.o)
+ .bss           0x00000000        0x0 .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_serial_output.c.o)
  .text          0x00000000        0x0 .pio/build/tamago/bootloader/esp-idf/log/liblog.a(log_timestamp.c.o)
  .data          0x00000000        0x0 .pio/build/tamago/bootloader/esp-idf/log/liblog.a(log_timestamp.c.o)
  .bss           0x00000000        0x0 .pio/build/tamago/bootloader/esp-idf/log/liblog.a(log_timestamp.c.o)
@@ -2420,7 +2427,7 @@ LOAD /home/huangk/.platformio/packages/toolchain-riscv32-esp/bin/../riscv32-esp-
                 [!provide]                        PROVIDE (esp_rom_gpio_pad_pullup_only = rom_gpio_pad_pullup)
                 0x400005cc                        PROVIDE (esp_rom_gpio_pad_set_drv = rom_gpio_pad_set_drv)
                 [!provide]                        PROVIDE (esp_rom_gpio_pad_unhold = rom_gpio_pad_unhold)
-                [!provide]                        PROVIDE (esp_rom_gpio_connect_in_signal = rom_gpio_matrix_in)
+                0x400005a0                        PROVIDE (esp_rom_gpio_connect_in_signal = rom_gpio_matrix_in)
                 [!provide]                        PROVIDE (esp_rom_gpio_connect_out_signal = rom_gpio_matrix_out)
                 [!provide]                        PROVIDE (esp_rom_efuse_mac_address_crc8 = esp_crc8)
                 0x4000071c                        PROVIDE (esp_rom_efuse_get_flash_gpio_info = ets_efuse_get_spiconfig)
@@ -2431,7 +2438,7 @@ LOAD /home/huangk/.platformio/packages/toolchain-riscv32-esp/bin/../riscv32-esp-
                 [!provide]                        PROVIDE (esp_rom_uart_tx_wait_idle = uart_tx_wait_idle)
                 [!provide]                        PROVIDE (esp_rom_uart_rx_one_char = uart_rx_one_char)
                 [!provide]                        PROVIDE (esp_rom_uart_rx_string = UartRxString)
-                0x40000080                        PROVIDE (esp_rom_output_flush_tx = uart_tx_flush)
+                [!provide]                        PROVIDE (esp_rom_output_flush_tx = uart_tx_flush)
                 0x40000068                        PROVIDE (esp_rom_output_tx_one_char = uart_tx_one_char)
                 0x40000084                        PROVIDE (esp_rom_output_tx_wait_idle = uart_tx_wait_idle)
                 [!provide]                        PROVIDE (esp_rom_output_rx_one_char = uart_rx_one_char)
@@ -3448,11 +3455,11 @@ LOAD /home/huangk/.platformio/packages/toolchain-riscv32-esp/bin/../riscv32-esp-
                 [!provide]                        PROVIDE (esprv_int_enable = esprv_intc_int_enable)
                 [!provide]                        PROVIDE (esprv_int_disable = esprv_intc_int_disable)
                 [!provide]                        PROVIDE (esprv_int_set_type = esprv_intc_int_set_type)
-                0x60000000                        PROVIDE (UART0 = 0x60000000)
+                [!provide]                        PROVIDE (UART0 = 0x60000000)
                 [!provide]                        PROVIDE (UART1 = 0x60010000)
                 0x60002000                        PROVIDE (SPIMEM1 = 0x60002000)
                 0x60003000                        PROVIDE (SPIMEM0 = 0x60003000)
-                [!provide]                        PROVIDE (GPIO = 0x60004000)
+                0x60004000                        PROVIDE (GPIO = 0x60004000)
                 [!provide]                        PROVIDE (SDM = 0x60004f00)
                 0x60008000                        PROVIDE (RTCCNTL = 0x60008000)
                 [!provide]                        PROVIDE (RTCIO = 0x60008400)
@@ -3493,7 +3500,7 @@ LOAD /home/huangk/.platformio/packages/toolchain-riscv32-esp/bin/../riscv32-esp-
                 0x00000001                        ASSERT ((bootloader_iram_loader_seg_start == 0x403ce710), bootloader_iram_loader_seg_start inconsistent with SRAM_DRAM_END)
 
 .iram_loader.text
-                0x403ce710     0x2fdc
+                0x403ce710     0x302c
                 0x403ce710                        . = ALIGN (0x10)
                 0x403ce710                        _loader_text_start = ABSOLUTE (.)
  *(.stub .gnu.warning .gnu.linkonce.literal.* .gnu.linkonce.t.*.literal .gnu.linkonce.t.*)
@@ -3526,166 +3533,170 @@ LOAD /home/huangk/.platformio/packages/toolchain-riscv32-esp/bin/../riscv32-esp-
  .iram1.3       0x403ced6c       0x16 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
                 0x403ced6c                rtc_clk_apb_freq_update
  .iram1.1       0x403ced82       0x58 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
- .iram1.0       0x403cedda       0x1e .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
-                0x403cedda                efuse_hal_chip_revision
- .iram1.1       0x403cedf8       0x1e .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
-                0x403cedf8                efuse_hal_blk_version
- .iram1.2       0x403cee16        0xe .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
-                0x403cee16                efuse_hal_get_disable_wafer_version_major
- .iram1.4       0x403cee24       0x10 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
-                0x403cee24                efuse_hal_get_disable_blk_version_major
- .iram1.5       0x403cee34       0x1e .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
-                0x403cee34                efuse_hal_flash_encryption_enabled
- .iram1.0       0x403cee52       0x10 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
-                0x403cee52                efuse_hal_get_major_chip_version
- .iram1.1       0x403cee62       0x18 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
-                0x403cee62                efuse_hal_get_minor_chip_version
+ .iram1.0       0x403cedda       0x3c .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_serial_output.c.o)
+                0x403cedda                esp_rom_output_set_as_console
+ .iram1.1       0x403cee16       0x1c .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_serial_output.c.o)
+                0x403cee16                esp_rom_output_switch_buffer
+ .iram1.0       0x403cee32       0x1e .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
+                0x403cee32                efuse_hal_chip_revision
+ .iram1.1       0x403cee50       0x1e .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
+                0x403cee50                efuse_hal_blk_version
+ .iram1.2       0x403cee6e        0xe .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
+                0x403cee6e                efuse_hal_get_disable_wafer_version_major
+ .iram1.4       0x403cee7c       0x10 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
+                0x403cee7c                efuse_hal_get_disable_blk_version_major
+ .iram1.5       0x403cee8c       0x1e .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
+                0x403cee8c                efuse_hal_flash_encryption_enabled
+ .iram1.0       0x403ceeaa       0x10 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
+                0x403ceeaa                efuse_hal_get_major_chip_version
+ .iram1.1       0x403ceeba       0x18 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
+                0x403ceeba                efuse_hal_get_minor_chip_version
  *liblog.a:(.literal .text .literal.* .text.*)
  .text.esp_log_early_timestamp
-                0x403cee7a       0x26 .pio/build/tamago/bootloader/esp-idf/log/liblog.a(log_timestamp.c.o)
-                0x403cee7a                esp_log_timestamp
-                0x403cee7a                esp_log_early_timestamp
+                0x403ceed2       0x26 .pio/build/tamago/bootloader/esp-idf/log/liblog.a(log_timestamp.c.o)
+                0x403ceed2                esp_log_timestamp
+                0x403ceed2                esp_log_early_timestamp
  *libgcc.a:(.literal .text .literal.* .text.*)
  *libclang_rt.builtins.a:(.literal .text .literal.* .text.*)
  *libbootloader_support.a:bootloader_clock_loader.*(.literal .text .literal.* .text.*)
  *libbootloader_support.a:bootloader_common_loader.*(.literal .text .literal.* .text.*)
  .text.bootloader_common_check_chip_revision_validity
-                0x403ceea0       0xac .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_common_loader.c.o)
-                0x403ceea0                bootloader_common_check_chip_revision_validity
+                0x403ceef8       0xac .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_common_loader.c.o)
+                0x403ceef8                bootloader_common_check_chip_revision_validity
  .text.bootloader_common_ota_select_crc
-                0x403cef4c        0xe .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_common_loader.c.o)
-                0x403cef4c                bootloader_common_ota_select_crc
+                0x403cefa4        0xe .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_common_loader.c.o)
+                0x403cefa4                bootloader_common_ota_select_crc
  .text.bootloader_common_ota_select_invalid
-                0x403cef5a       0x16 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_common_loader.c.o)
-                0x403cef5a                bootloader_common_ota_select_invalid
+                0x403cefb2       0x16 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_common_loader.c.o)
+                0x403cefb2                bootloader_common_ota_select_invalid
  .text.bootloader_common_ota_select_valid
-                0x403cef70       0x2a .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_common_loader.c.o)
-                0x403cef70                bootloader_common_ota_select_valid
+                0x403cefc8       0x2a .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_common_loader.c.o)
+                0x403cefc8                bootloader_common_ota_select_valid
  .text.bootloader_common_check_efuse_blk_validity
-                0x403cef9a       0xbe .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_common_loader.c.o)
-                0x403cef9a                bootloader_common_check_efuse_blk_validity
+                0x403ceff2       0xbe .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_common_loader.c.o)
+                0x403ceff2                bootloader_common_check_efuse_blk_validity
  .text.bootloader_common_check_chip_validity
-                0x403cf058       0x54 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_common_loader.c.o)
-                0x403cf058                bootloader_common_check_chip_validity
+                0x403cf0b0       0x54 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_common_loader.c.o)
+                0x403cf0b0                bootloader_common_check_chip_validity
  .text.bootloader_common_select_otadata
-                0x403cf0ac       0x3e .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_common_loader.c.o)
-                0x403cf0ac                bootloader_common_select_otadata
+                0x403cf104       0x3e .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_common_loader.c.o)
+                0x403cf104                bootloader_common_select_otadata
  .text.bootloader_common_get_active_otadata
-                0x403cf0ea       0x2e .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_common_loader.c.o)
-                0x403cf0ea                bootloader_common_get_active_otadata
+                0x403cf142       0x2e .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_common_loader.c.o)
+                0x403cf142                bootloader_common_get_active_otadata
  *libbootloader_support.a:bootloader_flash.*(.literal .text .literal.* .text.*)
  .text.spi_to_esp_err
-                0x403cf118       0x22 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash.c.o)
+                0x403cf170       0x22 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash.c.o)
  .text.bootloader_mmap_get_free_pages
-                0x403cf13a        0x6 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash.c.o)
-                0x403cf13a                bootloader_mmap_get_free_pages
+                0x403cf192        0x6 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash.c.o)
+                0x403cf192                bootloader_mmap_get_free_pages
  .text.bootloader_mmap
-                0x403cf140       0xc8 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash.c.o)
-                0x403cf140                bootloader_mmap
+                0x403cf198       0xc8 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash.c.o)
+                0x403cf198                bootloader_mmap
  .text.bootloader_munmap
-                0x403cf208       0x28 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash.c.o)
-                0x403cf208                bootloader_munmap
+                0x403cf260       0x28 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash.c.o)
+                0x403cf260                bootloader_munmap
  .text.bootloader_flash_read
-                0x403cf230      0x112 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash.c.o)
-                0x403cf230                bootloader_flash_read
+                0x403cf288      0x112 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash.c.o)
+                0x403cf288                bootloader_flash_read
  .text.bootloader_flash_erase_sector
-                0x403cf342       0x12 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash.c.o)
-                0x403cf342                bootloader_flash_erase_sector
+                0x403cf39a       0x12 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash.c.o)
+                0x403cf39a                bootloader_flash_erase_sector
  .text.bootloader_flash_write
-                0x403cf354       0xc4 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash.c.o)
-                0x403cf354                bootloader_flash_write
+                0x403cf3ac       0xc4 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash.c.o)
+                0x403cf3ac                bootloader_flash_write
  .text.bootloader_enable_wp
-                0x403cf418        0xc .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash.c.o)
-                0x403cf418                bootloader_enable_wp
+                0x403cf470        0xc .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash.c.o)
+                0x403cf470                bootloader_enable_wp
  .text.bootloader_flash_get_spi_mode
-                0x403cf424       0x3e .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash.c.o)
-                0x403cf424                bootloader_flash_get_spi_mode
+                0x403cf47c       0x3e .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash.c.o)
+                0x403cf47c                bootloader_flash_get_spi_mode
  *libbootloader_support.a:bootloader_random.*(.literal .text .literal.* .text.*)
  .text.bootloader_fill_random
-                0x403cf462       0x70 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_random.c.o)
-                0x403cf462                bootloader_fill_random
+                0x403cf4ba       0x70 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_random.c.o)
+                0x403cf4ba                bootloader_fill_random
  *libbootloader_support.a:bootloader_random*.*(.literal.bootloader_random_disable .text.bootloader_random_disable)
  .text.bootloader_random_disable
-                0x403cf4d2       0x9a .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_random_esp32c3.c.o)
-                0x403cf4d2                bootloader_random_disable
+                0x403cf52a       0x9a .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_random_esp32c3.c.o)
+                0x403cf52a                bootloader_random_disable
  *libbootloader_support.a:bootloader_efuse.*(.literal .text .literal.* .text.*)
  *libbootloader_support.a:bootloader_utility.*(.literal .text .literal.* .text.*)
  .text.log_invalid_app_partition
-                0x403cf56c       0x84 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
+                0x403cf5c4       0x84 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
  .text.index_to_partition
-                0x403cf5f0       0x3c .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
+                0x403cf648       0x3c .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
  .text.try_load_partition
-                0x403cf62c       0x44 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
+                0x403cf684       0x44 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
  .text.cache_ll_l1_enable_bus.constprop.0
-                0x403cf670       0x20 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
+                0x403cf6c8       0x20 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
  .text.set_actual_ota_seq
-                0x403cf690       0xac .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
+                0x403cf6e8       0xac .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
  .text.load_image
-                0x403cf73c      0x1ba .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
+                0x403cf794      0x1ba .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
  .text.bootloader_common_read_otadata
-                0x403cf8f6       0xa2 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
-                0x403cf8f6                bootloader_common_read_otadata
+                0x403cf94e       0xa2 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
+                0x403cf94e                bootloader_common_read_otadata
  .text.bootloader_utility_load_partition_table
-                0x403cf998      0x280 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
-                0x403cf998                bootloader_utility_load_partition_table
+                0x403cf9f0      0x280 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
+                0x403cf9f0                bootloader_utility_load_partition_table
  .text.bootloader_utility_get_selected_boot_partition
-                0x403cfc18      0x112 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
-                0x403cfc18                bootloader_utility_get_selected_boot_partition
+                0x403cfc70      0x112 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
+                0x403cfc70                bootloader_utility_get_selected_boot_partition
  .text.bootloader_reset
-                0x403cfd2a       0x1c .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
-                0x403cfd2a                bootloader_reset
+                0x403cfd82       0x1c .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
+                0x403cfd82                bootloader_reset
  .text.bootloader_utility_load_boot_image
-                0x403cfd46      0x11c .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
-                0x403cfd46                bootloader_utility_load_boot_image
+                0x403cfd9e      0x11c .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
+                0x403cfd9e                bootloader_utility_load_boot_image
  .text.bootloader_debug_buffer
-                0x403cfe62        0x2 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
-                0x403cfe62                bootloader_debug_buffer
+                0x403cfeba        0x2 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
+                0x403cfeba                bootloader_debug_buffer
  *libbootloader_support.a:bootloader_sha.*(.literal .text .literal.* .text.*)
  .text.bootloader_sha256_start
-                0x403cfe64       0x2c .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_sha.c.o)
-                0x403cfe64                bootloader_sha256_start
+                0x403cfebc       0x2c .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_sha.c.o)
+                0x403cfebc                bootloader_sha256_start
  .text.bootloader_sha256_data
-                0x403cfe90       0x34 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_sha.c.o)
-                0x403cfe90                bootloader_sha256_data
+                0x403cfee8       0x34 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_sha.c.o)
+                0x403cfee8                bootloader_sha256_data
  .text.bootloader_sha256_finish
-                0x403cfec4       0x46 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_sha.c.o)
-                0x403cfec4                bootloader_sha256_finish
+                0x403cff1c       0x46 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_sha.c.o)
+                0x403cff1c                bootloader_sha256_finish
  *libbootloader_support.a:bootloader_console_loader.*(.literal .text .literal.* .text.*)
  .text.bootloader_console_deinit
-                0x403cff0a        0xa .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_console_loader.c.o)
-                0x403cff0a                bootloader_console_deinit
+                0x403cff62        0x2 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_console_loader.c.o)
+                0x403cff62                bootloader_console_deinit
  *libbootloader_support.a:bootloader_panic.*(.literal .text .literal.* .text.*)
  .text.__assert_func
-                0x403cff14       0x1e .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_panic.c.o)
-                0x403cff14                __assert_func
+                0x403cff64       0x1e .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_panic.c.o)
+                0x403cff64                __assert_func
  .text.unlikely.abort
-                0x403cff32       0x22 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_panic.c.o)
-                0x403cff32                abort
+                0x403cff82       0x22 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_panic.c.o)
+                0x403cff82                abort
  *libbootloader_support.a:bootloader_soc.*(.literal .text .literal.* .text.*)
  .text.bootloader_ana_super_wdt_reset_config
-                0x403cff54       0x2c .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_soc.c.o)
-                0x403cff54                bootloader_ana_super_wdt_reset_config
+                0x403cffa4       0x2c .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_soc.c.o)
+                0x403cffa4                bootloader_ana_super_wdt_reset_config
  .text.bootloader_ana_clock_glitch_reset_config
-                0x403cff80       0x2e .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_soc.c.o)
-                0x403cff80                bootloader_ana_clock_glitch_reset_config
+                0x403cffd0       0x2e .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_soc.c.o)
+                0x403cffd0                bootloader_ana_clock_glitch_reset_config
  *libbootloader_support.a:esp_image_format.*(.literal .text .literal.* .text.*)
  .text.bootloader_util_regions_overlap
-                0x403cffae       0x4c .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(esp_image_format.c.o)
+                0x403cfffe       0x4c .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(esp_image_format.c.o)
  .text.should_load
-                0x403cfffa       0x5c .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(esp_image_format.c.o)
+                0x403d004a       0x5c .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(esp_image_format.c.o)
  .text.process_segments
-                0x403d0056      0x516 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(esp_image_format.c.o)
+                0x403d00a6      0x516 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(esp_image_format.c.o)
  .text.image_load
-                0x403d056c      0x400 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(esp_image_format.c.o)
+                0x403d05bc      0x400 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(esp_image_format.c.o)
  .text.bootloader_load_image
-                0x403d096c        0x8 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(esp_image_format.c.o)
-                0x403d096c                bootloader_load_image
+                0x403d09bc        0x8 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(esp_image_format.c.o)
+                0x403d09bc                bootloader_load_image
  *libbootloader_support.a:flash_encrypt.*(.literal .text .literal.* .text.*)
  *libbootloader_support.a:flash_encryption_secure_features.*(.literal .text .literal.* .text.*)
  *libbootloader_support.a:flash_partitions.*(.literal .text .literal.* .text.*)
  .text.esp_partition_table_verify
-                0x403d0974      0x1a0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(flash_partitions.c.o)
-                0x403d0974                esp_partition_table_verify
+                0x403d09c4      0x1a0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(flash_partitions.c.o)
+                0x403d09c4                esp_partition_table_verify
  *libbootloader_support.a:secure_boot.*(.literal .text .literal.* .text.*)
  *libbootloader_support.a:secure_boot_secure_features.*(.literal .text .literal.* .text.*)
  *libbootloader_support.a:secure_boot_signatures_bootloader.*(.literal .text .literal.* .text.*)
@@ -3693,110 +3704,110 @@ LOAD /home/huangk/.platformio/packages/toolchain-riscv32-esp/bin/../riscv32-esp-
  *libspi_flash.a:*.*(.literal .text .literal.* .text.*)
  *libhal.a:mmu_hal.*(.literal .text .literal.* .text.*)
  .text.mmu_hal_unmap_all
-                0x403d0b14       0x2c .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(mmu_hal.c.o)
-                0x403d0b14                mmu_hal_unmap_all
+                0x403d0b64       0x2c .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(mmu_hal.c.o)
+                0x403d0b64                mmu_hal_unmap_all
  .text.mmu_hal_init
-                0x403d0b40       0x2e .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(mmu_hal.c.o)
-                0x403d0b40                mmu_hal_init
+                0x403d0b90       0x2e .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(mmu_hal.c.o)
+                0x403d0b90                mmu_hal_init
  .text.mmu_hal_check_valid_ext_vaddr_region
-                0x403d0b6e       0x48 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(mmu_hal.c.o)
-                0x403d0b6e                mmu_hal_check_valid_ext_vaddr_region
+                0x403d0bbe       0x48 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(mmu_hal.c.o)
+                0x403d0bbe                mmu_hal_check_valid_ext_vaddr_region
  .text.mmu_hal_map_region
-                0x403d0bb6       0x88 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(mmu_hal.c.o)
-                0x403d0bb6                mmu_hal_map_region
+                0x403d0c06       0x88 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(mmu_hal.c.o)
+                0x403d0c06                mmu_hal_map_region
  *libhal.a:cache_hal.*(.literal .text .literal.* .text.*)
  .text.s_cache_hal_init_ctx
-                0x403d0c3e       0x3a .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(cache_hal.c.o)
-                0x403d0c3e                s_cache_hal_init_ctx
+                0x403d0c8e       0x3a .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(cache_hal.c.o)
+                0x403d0c8e                s_cache_hal_init_ctx
  .text.cache_hal_init
-                0x403d0c78       0x4c .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(cache_hal.c.o)
-                0x403d0c78                cache_hal_init
+                0x403d0cc8       0x4c .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(cache_hal.c.o)
+                0x403d0cc8                cache_hal_init
  .text.cache_hal_disable
-                0x403d0cc4       0x16 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(cache_hal.c.o)
-                0x403d0cc4                cache_hal_disable
+                0x403d0d14       0x16 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(cache_hal.c.o)
+                0x403d0d14                cache_hal_disable
  .text.cache_hal_enable
-                0x403d0cda       0x20 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(cache_hal.c.o)
-                0x403d0cda                cache_hal_enable
+                0x403d0d2a       0x20 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(cache_hal.c.o)
+                0x403d0d2a                cache_hal_enable
  *libhal.a:efuse_hal.*(.literal .text .literal.* .text.*)
  *libesp_hal_wdt.a:wdt_hal_iram.*(.literal .text .literal.* .text.*)
  .text.wdt_hal_init
-                0x403d0cfa      0x1a8 .pio/build/tamago/bootloader/esp-idf/esp_hal_wdt/libesp_hal_wdt.a(wdt_hal_iram.c.o)
-                0x403d0cfa                wdt_hal_init
+                0x403d0d4a      0x1a8 .pio/build/tamago/bootloader/esp-idf/esp_hal_wdt/libesp_hal_wdt.a(wdt_hal_iram.c.o)
+                0x403d0d4a                wdt_hal_init
  .text.wdt_hal_config_stage
-                0x403d0ea2      0x10a .pio/build/tamago/bootloader/esp-idf/esp_hal_wdt/libesp_hal_wdt.a(wdt_hal_iram.c.o)
-                0x403d0ea2                wdt_hal_config_stage
+                0x403d0ef2      0x10a .pio/build/tamago/bootloader/esp-idf/esp_hal_wdt/libesp_hal_wdt.a(wdt_hal_iram.c.o)
+                0x403d0ef2                wdt_hal_config_stage
  .text.wdt_hal_write_protect_disable
-                0x403d0fac       0x18 .pio/build/tamago/bootloader/esp-idf/esp_hal_wdt/libesp_hal_wdt.a(wdt_hal_iram.c.o)
-                0x403d0fac                wdt_hal_write_protect_disable
+                0x403d0ffc       0x18 .pio/build/tamago/bootloader/esp-idf/esp_hal_wdt/libesp_hal_wdt.a(wdt_hal_iram.c.o)
+                0x403d0ffc                wdt_hal_write_protect_disable
  .text.wdt_hal_write_protect_enable
-                0x403d0fc4       0x12 .pio/build/tamago/bootloader/esp-idf/esp_hal_wdt/libesp_hal_wdt.a(wdt_hal_iram.c.o)
-                0x403d0fc4                wdt_hal_write_protect_enable
+                0x403d1014       0x12 .pio/build/tamago/bootloader/esp-idf/esp_hal_wdt/libesp_hal_wdt.a(wdt_hal_iram.c.o)
+                0x403d1014                wdt_hal_write_protect_enable
  .text.wdt_hal_enable
-                0x403d0fd6       0x28 .pio/build/tamago/bootloader/esp-idf/esp_hal_wdt/libesp_hal_wdt.a(wdt_hal_iram.c.o)
-                0x403d0fd6                wdt_hal_enable
+                0x403d1026       0x28 .pio/build/tamago/bootloader/esp-idf/esp_hal_wdt/libesp_hal_wdt.a(wdt_hal_iram.c.o)
+                0x403d1026                wdt_hal_enable
  .text.wdt_hal_set_flashboot_en
-                0x403d0ffe       0x36 .pio/build/tamago/bootloader/esp-idf/esp_hal_wdt/libesp_hal_wdt.a(wdt_hal_iram.c.o)
-                0x403d0ffe                wdt_hal_set_flashboot_en
+                0x403d104e       0x36 .pio/build/tamago/bootloader/esp-idf/esp_hal_wdt/libesp_hal_wdt.a(wdt_hal_iram.c.o)
+                0x403d104e                wdt_hal_set_flashboot_en
  *libesp_hw_support.a:rtc_clk.*(.literal .text .literal.* .text.*)
  .text.rtc_clk_bbpll_disable
-                0x403d1034       0x16 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
+                0x403d1084       0x16 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
  .text.rtc_clk_32k_enable.part.0
-                0x403d104a       0x56 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
+                0x403d109a       0x56 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
  .text.rtc_clk_32k_enable
-                0x403d10a0       0x1c .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
-                0x403d10a0                rtc_clk_32k_enable
+                0x403d10f0       0x1c .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
+                0x403d10f0                rtc_clk_32k_enable
  .text.rtc_clk_8m_enable
-                0x403d10bc       0x8e .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
-                0x403d10bc                rtc_clk_8m_enable
+                0x403d110c       0x8e .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
+                0x403d110c                rtc_clk_8m_enable
  .text.rtc_clk_slow_src_set
-                0x403d114a       0x6c .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
-                0x403d114a                rtc_clk_slow_src_set
+                0x403d119a       0x6c .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
+                0x403d119a                rtc_clk_slow_src_set
  .text.rtc_clk_slow_src_get
-                0x403d11b6       0x1a .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
-                0x403d11b6                rtc_clk_slow_src_get
+                0x403d1206       0x1a .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
+                0x403d1206                rtc_clk_slow_src_get
  .text.rtc_clk_slow_freq_get_hz
-                0x403d11d0       0x34 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
-                0x403d11d0                rtc_clk_slow_freq_get_hz
+                0x403d1220       0x34 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
+                0x403d1220                rtc_clk_slow_freq_get_hz
  .text.rtc_clk_fast_src_set
-                0x403d1204       0x38 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
-                0x403d1204                rtc_clk_fast_src_set
+                0x403d1254       0x38 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
+                0x403d1254                rtc_clk_fast_src_set
  .text.rtc_clk_fast_src_get
-                0x403d123c        0xc .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
-                0x403d123c                rtc_clk_fast_src_get
+                0x403d128c        0xc .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
+                0x403d128c                rtc_clk_fast_src_get
  .text.rtc_clk_cpu_freq_mhz_to_config
-                0x403d1248       0x60 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
-                0x403d1248                rtc_clk_cpu_freq_mhz_to_config
+                0x403d1298       0x60 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
+                0x403d1298                rtc_clk_cpu_freq_mhz_to_config
  .text.rtc_clk_cpu_freq_get_config
-                0x403d12a8       0xd2 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
-                0x403d12a8                rtc_clk_cpu_freq_get_config
+                0x403d12f8       0xd2 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
+                0x403d12f8                rtc_clk_cpu_freq_get_config
  .text.rtc_clk_xtal_freq_update
-                0x403d137a       0x2a .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
-                0x403d137a                rtc_clk_xtal_freq_update
+                0x403d13ca       0x2a .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
+                0x403d13ca                rtc_clk_xtal_freq_update
  .text.rtc_clk_cpu_freq_to_pll_mhz
-                0x403d13a4       0x6a .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
+                0x403d13f4       0x6a .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
  .text.rtc_clk_cpu_freq_set_config
-                0x403d140e      0x234 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
-                0x403d140e                rtc_clk_cpu_freq_set_config
+                0x403d145e      0x234 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
+                0x403d145e                rtc_clk_cpu_freq_set_config
  .text.rtc_clk_apb_freq_get
-                0x403d1642       0x2c .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
-                0x403d1642                rtc_clk_apb_freq_get
+                0x403d1692       0x2c .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
+                0x403d1692                rtc_clk_apb_freq_get
  .text.rtc_clk_divider_set
-                0x403d166e       0x3e .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
-                0x403d166e                rtc_clk_divider_set
+                0x403d16be       0x3e .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
+                0x403d16be                rtc_clk_divider_set
  .text.rtc_clk_8m_divider_set
-                0x403d16ac       0x32 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
-                0x403d16ac                rtc_clk_8m_divider_set
+                0x403d16fc       0x32 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
+                0x403d16fc                rtc_clk_8m_divider_set
  *libesp_hw_support.a:rtc_time.*(.literal .text .literal.* .text.*)
  *libesp_hw_support.a:regi2c_ctrl.*(.literal .text .literal.* .text.*)
  *libefuse.a:*.*(.literal .text .literal.* .text.*)
  *libriscv.a:rv_utils.*(.literal .text .literal.* .text.*)
  .text.rv_utils_dbgr_is_attached
-                0x403d16de        0xe .pio/build/tamago/bootloader/esp-idf/riscv/libriscv.a(rv_utils.c.o)
-                0x403d16de                rv_utils_dbgr_is_attached
+                0x403d172e        0xe .pio/build/tamago/bootloader/esp-idf/riscv/libriscv.a(rv_utils.c.o)
+                0x403d172e                rv_utils_dbgr_is_attached
  *(.fini.literal)
  *(.fini)
  *(.gnu.version)
-                0x403d16ec                        _loader_text_end = ABSOLUTE (.)
+                0x403d173c                        _loader_text_end = ABSOLUTE (.)
 
 .iram.text      0x403cbf10        0x0
                 0x403cbf10                        . = ALIGN (0x10)
@@ -3853,7 +3864,7 @@ LOAD /home/huangk/.platformio/packages/toolchain-riscv32-esp/bin/../riscv32-esp-
                 0x3fcd5830       0x50 .pio/build/tamago/bootloader/esp-idf/esp_bootloader_format/libesp_bootloader_format.a(esp_bootloader_desc.c.o)
                 0x3fcd5830                esp_bootloader_desc
 
-.dram0.data     0x3fcd5880        0x8
+.dram0.data     0x3fcd5880        0xc
  *(.dram1 .dram1.*)
  *(.data)
  *(.data.*)
@@ -3863,179 +3874,184 @@ LOAD /home/huangk/.platformio/packages/toolchain-riscv32-esp/bin/../riscv32-esp-
  *(.sdata.*)
  .sdata.current_read_mapping
                 0x3fcd5880        0x4 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash.c.o)
- .sdata._putc1  0x3fcd5884        0x4 .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_sys.c.o)
-                0x3fcd5884                _putc1
+ .sdata._putc2  0x3fcd5884        0x4 .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_sys.c.o)
+                0x3fcd5884                _putc2
+ .sdata._putc1  0x3fcd5888        0x4 .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_sys.c.o)
+                0x3fcd5888                _putc1
  *(.gnu.linkonce.s.*)
  *(.gnu.linkonce.s2.*)
  *(.jcr)
-                0x3fcd5888                        _data_end = ABSOLUTE (.)
+                0x3fcd588c                        _data_end = ABSOLUTE (.)
 
-.dram0.rodata   0x3fcd5888     0x1504
-                0x3fcd5888                        _rodata_start = ABSOLUTE (.)
+.dram0.rodata   0x3fcd588c     0x153c
+                0x3fcd588c                        _rodata_start = ABSOLUTE (.)
  *(.rodata)
  *(.rodata.*)
  .rodata.call_start_cpu0.str1.4
-                0x3fcd5888     0x1429 .pio/build/tamago/bootloader/esp-idf/main/libmain.a(bootloader_start.c.o)
+                0x3fcd588c     0x1429 .pio/build/tamago/bootloader/esp-idf/main/libmain.a(bootloader_start.c.o)
                                  0x31 (size before relaxing)
  .rodata.log_invalid_app_partition.str1.4
-                0x3fcd6cb1        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
+                0x3fcd6cb5        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
                                  0x99 (size before relaxing)
  .rodata.try_load_partition.str1.4
-                0x3fcd6cb1        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
+                0x3fcd6cb5        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
                                  0x37 (size before relaxing)
  .rodata.set_actual_ota_seq.str1.4
-                0x3fcd6cb1        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
+                0x3fcd6cb5        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
                                  0x6e (size before relaxing)
  .rodata.load_image.str1.4
-                0x3fcd6cb1        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
+                0x3fcd6cb5        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
                                  0x95 (size before relaxing)
  .rodata.bootloader_common_read_otadata.str1.4
-                0x3fcd6cb1        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
+                0x3fcd6cb5        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
                                  0x7e (size before relaxing)
  .rodata.bootloader_utility_load_partition_table.str1.4
-                0x3fcd6cb1        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
+                0x3fcd6cb5        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
                                 0x1fc (size before relaxing)
  .rodata.bootloader_utility_get_selected_boot_partition.str1.4
-                0x3fcd6cb1        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
+                0x3fcd6cb5        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
                                  0xec (size before relaxing)
  .rodata.bootloader_utility_load_boot_image.str1.4
-                0x3fcd6cb1        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
+                0x3fcd6cb5        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
                                  0xc3 (size before relaxing)
  .rodata.esp_partition_table_verify.str1.4
-                0x3fcd6cb1        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(flash_partitions.c.o)
+                0x3fcd6cb5        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(flash_partitions.c.o)
                                 0x131 (size before relaxing)
  .rodata.bootloader_util_regions_overlap.str1.4
-                0x3fcd6cb1        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(esp_image_format.c.o)
+                0x3fcd6cb5        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(esp_image_format.c.o)
                                  0x5e (size before relaxing)
  .rodata.process_segments.str1.4
-                0x3fcd6cb1        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(esp_image_format.c.o)
+                0x3fcd6cb5        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(esp_image_format.c.o)
                                 0x28e (size before relaxing)
  .rodata.image_load.str1.4
-                0x3fcd6cb1        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(esp_image_format.c.o)
+                0x3fcd6cb5        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(esp_image_format.c.o)
                                 0x192 (size before relaxing)
- *fill*         0x3fcd6cb1        0x3 
+ *fill*         0x3fcd6cb5        0x3 
  .rodata.__func__.0
-                0x3fcd6cb4       0x20 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(esp_image_format.c.o)
+                0x3fcd6cb8       0x20 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(esp_image_format.c.o)
  .rodata.__func__.1
-                0x3fcd6cd4       0x16 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(esp_image_format.c.o)
+                0x3fcd6cd8       0x16 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(esp_image_format.c.o)
  .rodata.bootloader_sha256_data.str1.4
-                0x3fcd6cea        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_sha.c.o)
+                0x3fcd6cee        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_sha.c.o)
                                  0x49 (size before relaxing)
- *fill*         0x3fcd6cea        0x2 
+ *fill*         0x3fcd6cee        0x2 
  .rodata.__func__.0
-                0x3fcd6cec       0x19 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_sha.c.o)
- *fill*         0x3fcd6d05        0x3 
+                0x3fcd6cf0       0x19 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_sha.c.o)
+ *fill*         0x3fcd6d09        0x3 
  .rodata.__func__.1
-                0x3fcd6d08       0x17 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_sha.c.o)
+                0x3fcd6d0c       0x17 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_sha.c.o)
  .rodata.bootloader_check_if_wdt_reset.str1.4
-                0x3fcd6d1f        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_esp32c3.c.o)
+                0x3fcd6d23        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_esp32c3.c.o)
                                  0x3c (size before relaxing)
  .rodata.bootloader_init.str1.4
-                0x3fcd6d1f        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_esp32c3.c.o)
+                0x3fcd6d23        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_esp32c3.c.o)
                                  0xbb (size before relaxing)
- *fill*         0x3fcd6d1f        0x1 
+ *fill*         0x3fcd6d23        0x1 
  .rodata.__func__.0
-                0x3fcd6d20       0x10 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_esp32c3.c.o)
+                0x3fcd6d24       0x10 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_esp32c3.c.o)
  .rodata.__assert_func.str1.4
-                0x3fcd6d30        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_panic.c.o)
+                0x3fcd6d34        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_panic.c.o)
                                  0x22 (size before relaxing)
  .rodata.abort.str1.4
-                0x3fcd6d30        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_panic.c.o)
+                0x3fcd6d34        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_panic.c.o)
                                  0x22 (size before relaxing)
  .rodata.bootloader_common_check_chip_revision_validity.str1.4
-                0x3fcd6d30        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_common_loader.c.o)
+                0x3fcd6d34        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_common_loader.c.o)
                                  0xa3 (size before relaxing)
  .rodata.bootloader_common_check_efuse_blk_validity.str1.4
-                0x3fcd6d30        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_common_loader.c.o)
+                0x3fcd6d34        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_common_loader.c.o)
                                  0x98 (size before relaxing)
  .rodata.bootloader_common_check_chip_validity.str1.4
-                0x3fcd6d30        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_common_loader.c.o)
+                0x3fcd6d34        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_common_loader.c.o)
                                  0x35 (size before relaxing)
  .rodata.bootloader_fill_random.str1.4
-                0x3fcd6d30        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_random.c.o)
+                0x3fcd6d34        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_random.c.o)
                                  0x4c (size before relaxing)
  .rodata.__func__.0
-                0x3fcd6d30       0x17 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_random.c.o)
+                0x3fcd6d34       0x17 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_random.c.o)
  .rodata.bootloader_mmap.str1.4
-                0x3fcd6d47        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash.c.o)
+                0x3fcd6d4b        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash.c.o)
                                  0x8d (size before relaxing)
  .rodata.bootloader_flash_read.str1.4
-                0x3fcd6d47        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash.c.o)
+                0x3fcd6d4b        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash.c.o)
                                  0x5c (size before relaxing)
  .rodata.str1.4
-                0x3fcd6d47        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash.c.o)
+                0x3fcd6d4b        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash.c.o)
                                  0xc8 (size before relaxing)
  .rodata.bootloader_flash_write.str1.4
-                0x3fcd6d47        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash.c.o)
+                0x3fcd6d4b        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash.c.o)
                                  0xcc (size before relaxing)
- *fill*         0x3fcd6d47        0x1 
+ *fill*         0x3fcd6d4b        0x1 
  .rodata.__func__.1
-                0x3fcd6d48       0x1b .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash.c.o)
- *fill*         0x3fcd6d63        0x1 
+                0x3fcd6d4c       0x1b .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash.c.o)
+ *fill*         0x3fcd6d67        0x1 
  .rodata.__func__.0
-                0x3fcd6d64       0x28 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash.c.o)
+                0x3fcd6d68       0x28 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash.c.o)
  .rodata.bootloader_init_spi_flash.str1.4
-                0x3fcd6d8c        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32c3.c.o)
+                0x3fcd6d90        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32c3.c.o)
                                  0xf9 (size before relaxing)
  .rodata.bootloader_read_bootloader_header.str1.4
-                0x3fcd6d8c        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_init.c.o)
+                0x3fcd6d90        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_init.c.o)
                                  0x3d (size before relaxing)
  .rodata.bootloader_check_bootloader_validity.str1.4
-                0x3fcd6d8c        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_init.c.o)
+                0x3fcd6d90        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_init.c.o)
                                  0x4e (size before relaxing)
  .rodata.bootloader_enable_random.str1.4
-                0x3fcd6d8c        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_init.c.o)
+                0x3fcd6d90        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_init.c.o)
                                  0x32 (size before relaxing)
  .rodata.bootloader_print_banner.str1.4
-                0x3fcd6d8c        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_init.c.o)
+                0x3fcd6d90        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_init.c.o)
                                  0x4d (size before relaxing)
+ .rodata.uart_periph_signal
+                0x3fcd6d90       0x38 .pio/build/tamago/bootloader/esp-idf/esp_hal_uart/libesp_hal_uart.a(uart_periph.c.o)
+                0x3fcd6d90                uart_periph_signal
  .rodata.rtc_clk_init.str1.4
-                0x3fcd6d8c        0x0 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk_init.c.o)
+                0x3fcd6dc8        0x0 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk_init.c.o)
                                  0x39 (size before relaxing)
  .rodata.str1.4
-                0x3fcd6d8c        0x0 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
+                0x3fcd6dc8        0x0 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
                                  0x43 (size before relaxing)
  .rodata.rtc_clk_cpu_freq_get_config.str1.4
-                0x3fcd6d8c        0x0 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
+                0x3fcd6dc8        0x0 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
                                  0x31 (size before relaxing)
  *(.gnu.linkonce.r.*)
  *(.rodata1)
  *(.sdata2 .sdata2.* .srodata .srodata.*)
-                0x3fcd6d8c                        __XT_EXCEPTION_TABLE_ = ABSOLUTE (.)
+                0x3fcd6dc8                        __XT_EXCEPTION_TABLE_ = ABSOLUTE (.)
  *(.xt_except_table)
  *(.gcc_except_table)
  *(.gnu.linkonce.e.*)
  *(.gnu.version_r)
  *(.eh_frame_hdr)
  *(.eh_frame)
-                0x3fcd6d8c                        . = ((. + 0x3) & 0xfffffffffffffffc)
-                0x3fcd6d8c                        __init_array_start = ABSOLUTE (.)
+                0x3fcd6dc8                        . = ((. + 0x3) & 0xfffffffffffffffc)
+                0x3fcd6dc8                        __init_array_start = ABSOLUTE (.)
  *crtbegin.*(.ctors)
  *(EXCLUDE_FILE(*crtend.*) .ctors)
  *(SORT_BY_NAME(.ctors.*))
  *(.ctors)
-                0x3fcd6d8c                        __init_array_end = ABSOLUTE (.)
+                0x3fcd6dc8                        __init_array_end = ABSOLUTE (.)
  *crtbegin.*(.dtors)
  *(EXCLUDE_FILE(*crtend.*) .dtors)
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
-                0x3fcd6d8c                        __XT_EXCEPTION_DESCS_ = ABSOLUTE (.)
+                0x3fcd6dc8                        __XT_EXCEPTION_DESCS_ = ABSOLUTE (.)
  *(.xt_except_desc)
  *(.gnu.linkonce.h.*)
-                0x3fcd6d8c                        __XT_EXCEPTION_DESCS_END__ = ABSOLUTE (.)
+                0x3fcd6dc8                        __XT_EXCEPTION_DESCS_END__ = ABSOLUTE (.)
  *(.xt_except_desc_end)
  *(.dynamic)
  *(.gnu.version_d)
-                0x3fcd6d8c                        _rodata_end = ABSOLUTE (.)
-                0x3fcd6d8c                        _lit4_start = ABSOLUTE (.)
+                0x3fcd6dc8                        _rodata_end = ABSOLUTE (.)
+                0x3fcd6dc8                        _lit4_start = ABSOLUTE (.)
  *(*.lit4)
  *(.lit4.*)
  *(.gnu.linkonce.lit4.*)
-                0x3fcd6d8c                        _lit4_end = ABSOLUTE (.)
-                0x3fcd6d8c                        . = ALIGN (0x4)
-                0x3fcd6d8c                        _dram_end = ABSOLUTE (.)
+                0x3fcd6dc8                        _lit4_end = ABSOLUTE (.)
+                0x3fcd6dc8                        . = ALIGN (0x4)
+                0x3fcd6dc8                        _dram_end = ABSOLUTE (.)
 
-.iram.text      0x403cbf10      0xd0e
+.iram.text      0x403cbf10      0xcca
                 0x403cbf10                        _stext = .
                 0x403cbf10                        _text_start = ABSOLUTE (.)
  *(.literal .text .literal.* .text.* .stub .gnu.warning .gnu.linkonce.literal.* .gnu.linkonce.t.*.literal .gnu.linkonce.t.*)
@@ -4058,67 +4074,69 @@ LOAD /home/huangk/.platformio/packages/toolchain-riscv32-esp/bin/../riscv32-esp-
                 0x403cc188       0xaa .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_clock_init.c.o)
                 0x403cc188                bootloader_clock_configure
  .text.bootloader_init_mem
-                0x403cc232        0x4 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_mem.c.o)
+                0x403cc232        0x2 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_mem.c.o)
                 0x403cc232                bootloader_init_mem
  .text.bootloader_random_enable
-                0x403cc236      0x200 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_random_esp32c3.c.o)
-                0x403cc236                bootloader_random_enable
+                0x403cc234      0x200 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_random_esp32c3.c.o)
+                0x403cc234                bootloader_random_enable
  .text.bootloader_flash_update_id
-                0x403cc436       0x1c .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32c3.c.o)
-                0x403cc436                bootloader_flash_update_id
+                0x403cc434       0x1c .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32c3.c.o)
+                0x403cc434                bootloader_flash_update_id
  .text.bootloader_init_spi_flash
-                0x403cc452      0x23c .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32c3.c.o)
-                0x403cc452                bootloader_init_spi_flash
+                0x403cc450      0x23c .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32c3.c.o)
+                0x403cc450                bootloader_init_spi_flash
  .text.bootloader_check_reset
-                0x403cc68e       0x20 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_reset_common.c.o)
-                0x403cc68e                bootloader_check_reset
+                0x403cc68c       0x20 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_reset_common.c.o)
+                0x403cc68c                bootloader_check_reset
  .text.bootloader_clear_bss_section
-                0x403cc6ae       0x1c .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_init.c.o)
-                0x403cc6ae                bootloader_clear_bss_section
+                0x403cc6ac       0x1c .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_init.c.o)
+                0x403cc6ac                bootloader_clear_bss_section
  .text.bootloader_read_bootloader_header
-                0x403cc6ca       0x3e .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_init.c.o)
-                0x403cc6ca                bootloader_read_bootloader_header
+                0x403cc6c8       0x3e .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_init.c.o)
+                0x403cc6c8                bootloader_read_bootloader_header
  .text.bootloader_check_bootloader_validity
-                0x403cc708       0x84 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_init.c.o)
-                0x403cc708                bootloader_check_bootloader_validity
+                0x403cc706       0x84 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_init.c.o)
+                0x403cc706                bootloader_check_bootloader_validity
  .text.bootloader_config_wdt
-                0x403cc78c       0x84 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_init.c.o)
-                0x403cc78c                bootloader_config_wdt
+                0x403cc78a       0x84 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_init.c.o)
+                0x403cc78a                bootloader_config_wdt
  .text.bootloader_enable_random
-                0x403cc810       0x28 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_init.c.o)
-                0x403cc810                bootloader_enable_random
+                0x403cc80e       0x28 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_init.c.o)
+                0x403cc80e                bootloader_enable_random
  .text.bootloader_print_banner
-                0x403cc838       0x54 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_init.c.o)
-                0x403cc838                bootloader_print_banner
+                0x403cc836       0x54 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_init.c.o)
+                0x403cc836                bootloader_print_banner
  .text.bootloader_init_ext_mem
-                0x403cc88c       0x2c .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_init.c.o)
-                0x403cc88c                bootloader_init_ext_mem
+                0x403cc88a       0x2c .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_init.c.o)
+                0x403cc88a                bootloader_init_ext_mem
  .text.bootloader_console_init
-                0x403cc8b8       0xb2 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_console.c.o)
-                0x403cc8b8                bootloader_console_init
+                0x403cc8b6       0x66 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_console.c.o)
+                0x403cc8b6                bootloader_console_init
  .text.esp_bootloader_get_description
-                0x403cc96a        0xa .pio/build/tamago/bootloader/esp-idf/esp_bootloader_format/libesp_bootloader_format.a(esp_bootloader_desc.c.o)
-                0x403cc96a                esp_bootloader_get_description
+                0x403cc91c        0xa .pio/build/tamago/bootloader/esp-idf/esp_bootloader_format/libesp_bootloader_format.a(esp_bootloader_desc.c.o)
+                0x403cc91c                esp_bootloader_get_description
  .text.esp_cpu_configure_region_protection
-                0x403cc974      0x100 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(cpu_region_protect.c.o)
-                0x403cc974                esp_cpu_configure_region_protection
+                0x403cc926      0x100 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(cpu_region_protect.c.o)
+                0x403cc926                esp_cpu_configure_region_protection
  .text.rtc_clk_init
-                0x403cca74      0x140 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk_init.c.o)
-                0x403cca74                rtc_clk_init
+                0x403cca26      0x140 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk_init.c.o)
+                0x403cca26                rtc_clk_init
+ .text.esp_rom_output_noop
+                0x403ccb66        0x2 .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_sys.c.o)
  .text.esp_rom_output_putc
-                0x403ccbb4       0x30 .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_sys.c.o)
-                0x403ccbb4                esp_rom_output_putc
- .text.esp_rom_install_uart_printf
-                0x403ccbe4       0x2a .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_sys.c.o)
-                0x403ccbe4                esp_rom_install_uart_printf
+                0x403ccb68       0x30 .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_sys.c.o)
+                0x403ccb68                esp_rom_output_putc
+ .text.esp_rom_install_channel_putc
+                0x403ccb98       0x32 .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_sys.c.o)
+                0x403ccb98                esp_rom_install_channel_putc
  *(.iram .iram.*)
  *(.fini.literal)
  *(.fini)
  *(.gnu.version)
-                0x403ccc1e                        . = (. + 0x10)
- *fill*         0x403ccc0e       0x10 
-                0x403ccc1e                        _text_end = ABSOLUTE (.)
-                0x403ccc1e                        _etext = .
+                0x403ccbda                        . = (. + 0x10)
+ *fill*         0x403ccbca       0x10 
+                0x403ccbda                        _text_end = ABSOLUTE (.)
+                0x403ccbda                        _etext = .
 
 /DISCARD/
  *(.rela.*)
@@ -4142,7 +4160,7 @@ LOAD /home/huangk/.platformio/packages/toolchain-riscv32-esp/bin/../riscv32-esp-
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000      0x910
+.debug_aranges  0x00000000      0x950
  *(.debug_aranges)
  .debug_aranges
                 0x00000000       0x20 .pio/build/tamago/bootloader/esp-idf/main/libmain.a(bootloader_start.c.o)
@@ -4187,137 +4205,147 @@ LOAD /home/huangk/.platformio/packages/toolchain-riscv32-esp/bin/../riscv32-esp-
  .debug_aranges
                 0x000004f0       0x20 .pio/build/tamago/bootloader/esp-idf/esp_bootloader_format/libesp_bootloader_format.a(esp_bootloader_desc.c.o)
  .debug_aranges
-                0x00000510       0x70 .pio/build/tamago/bootloader/esp-idf/esp_hal_wdt/libesp_hal_wdt.a(wdt_hal_iram.c.o)
+                0x00000510       0x18 .pio/build/tamago/bootloader/esp-idf/esp_hal_uart/libesp_hal_uart.a(uart_periph.c.o)
  .debug_aranges
-                0x00000580       0x20 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(cpu_region_protect.c.o)
+                0x00000528       0x70 .pio/build/tamago/bootloader/esp-idf/esp_hal_wdt/libesp_hal_wdt.a(wdt_hal_iram.c.o)
  .debug_aranges
-                0x000005a0       0x20 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk_init.c.o)
+                0x00000598       0x20 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(cpu_region_protect.c.o)
  .debug_aranges
-                0x000005c0      0x130 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
+                0x000005b8       0x20 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk_init.c.o)
  .debug_aranges
-                0x000006f0       0x40 .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_sys.c.o)
+                0x000005d8      0x130 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
  .debug_aranges
-                0x00000730       0x20 .pio/build/tamago/bootloader/esp-idf/log/liblog.a(log_timestamp.c.o)
+                0x00000708       0x40 .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_sys.c.o)
  .debug_aranges
-                0x00000750       0x20 .pio/build/tamago/bootloader/esp-idf/riscv/libriscv.a(rv_utils.c.o)
+                0x00000748       0x28 .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_serial_output.c.o)
  .debug_aranges
-                0x00000770       0x50 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
+                0x00000770       0x20 .pio/build/tamago/bootloader/esp-idf/log/liblog.a(log_timestamp.c.o)
  .debug_aranges
-                0x000007c0       0x58 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
+                0x00000790       0x20 .pio/build/tamago/bootloader/esp-idf/riscv/libriscv.a(rv_utils.c.o)
  .debug_aranges
-                0x00000818       0x70 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(mmu_hal.c.o)
+                0x000007b0       0x50 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
  .debug_aranges
-                0x00000888       0x88 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(cache_hal.c.o)
+                0x00000800       0x58 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
+ .debug_aranges
+                0x00000858       0x70 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(mmu_hal.c.o)
+ .debug_aranges
+                0x000008c8       0x88 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(cache_hal.c.o)
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000    0x32150
+.debug_info     0x00000000    0x32b0c
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x53e .pio/build/tamago/bootloader/esp-idf/main/libmain.a(bootloader_start.c.o)
  .debug_info    0x0000053e     0x2344 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
  .debug_info    0x00002882      0x6a0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(flash_partitions.c.o)
  .debug_info    0x00002f22     0x2bfc .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(esp_image_format.c.o)
  .debug_info    0x00005b1e      0x462 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_sha.c.o)
- .debug_info    0x00005f80       0xbf .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_console_loader.c.o)
- .debug_info    0x0000603f       0xdf .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_soc.c.o)
- .debug_info    0x0000611e     0x376f .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_esp32c3.c.o)
- .debug_info    0x0000988d      0x216 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_panic.c.o)
- .debug_info    0x00009aa3      0xbb8 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_common_loader.c.o)
- .debug_info    0x0000a65b      0x351 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_clock_init.c.o)
- .debug_info    0x0000a9ac       0x9f .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_mem.c.o)
- .debug_info    0x0000aa4b      0x2e2 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_random.c.o)
- .debug_info    0x0000ad2d     0x7478 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_random_esp32c3.c.o)
- .debug_info    0x000121a5     0x4044 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash.c.o)
- .debug_info    0x000161e9      0xd4c .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32c3.c.o)
- .debug_info    0x00016f35      0x1f3 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_reset_common.c.o)
- .debug_info    0x00017128     0x48fa .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_init.c.o)
- .debug_info    0x0001ba22     0x1753 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_console.c.o)
- .debug_info    0x0001d175      0x7ae .pio/build/tamago/bootloader/esp-idf/efuse/libefuse.a(esp_efuse_fields.c.o)
- .debug_info    0x0001d923      0x18e .pio/build/tamago/bootloader/esp-idf/esp_bootloader_format/libesp_bootloader_format.a(esp_bootloader_desc.c.o)
- .debug_info    0x0001dab1     0x83ba .pio/build/tamago/bootloader/esp-idf/esp_hal_wdt/libesp_hal_wdt.a(wdt_hal_iram.c.o)
- .debug_info    0x00025e6b      0x26b .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(cpu_region_protect.c.o)
- .debug_info    0x000260d6      0x9b9 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk_init.c.o)
- .debug_info    0x00026a8f     0x1bf9 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
- .debug_info    0x00028688      0x2a0 .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_sys.c.o)
- .debug_info    0x00028928      0x140 .pio/build/tamago/bootloader/esp-idf/log/liblog.a(log_timestamp.c.o)
- .debug_info    0x00028a68       0xd6 .pio/build/tamago/bootloader/esp-idf/riscv/libriscv.a(rv_utils.c.o)
- .debug_info    0x00028b3e     0x37ed .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
- .debug_info    0x0002c32b     0x3c22 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
- .debug_info    0x0002ff4d      0xf7f .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(mmu_hal.c.o)
- .debug_info    0x00030ecc     0x1284 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(cache_hal.c.o)
+ .debug_info    0x00005f80       0x85 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_console_loader.c.o)
+ .debug_info    0x00006005       0xdf .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_soc.c.o)
+ .debug_info    0x000060e4     0x376f .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_esp32c3.c.o)
+ .debug_info    0x00009853      0x216 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_panic.c.o)
+ .debug_info    0x00009a69      0xbb8 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_common_loader.c.o)
+ .debug_info    0x0000a621      0x351 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_clock_init.c.o)
+ .debug_info    0x0000a972       0x9f .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_mem.c.o)
+ .debug_info    0x0000aa11      0x2e2 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_random.c.o)
+ .debug_info    0x0000acf3     0x7478 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_random_esp32c3.c.o)
+ .debug_info    0x0001216b     0x4044 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash.c.o)
+ .debug_info    0x000161af      0xd4c .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32c3.c.o)
+ .debug_info    0x00016efb      0x1f3 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_reset_common.c.o)
+ .debug_info    0x000170ee     0x48fa .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_init.c.o)
+ .debug_info    0x0001b9e8     0x19d5 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_console.c.o)
+ .debug_info    0x0001d3bd      0x7ae .pio/build/tamago/bootloader/esp-idf/efuse/libefuse.a(esp_efuse_fields.c.o)
+ .debug_info    0x0001db6b      0x18e .pio/build/tamago/bootloader/esp-idf/esp_bootloader_format/libesp_bootloader_format.a(esp_bootloader_desc.c.o)
+ .debug_info    0x0001dcf9      0x34f .pio/build/tamago/bootloader/esp-idf/esp_hal_uart/libesp_hal_uart.a(uart_periph.c.o)
+ .debug_info    0x0001e048     0x83ba .pio/build/tamago/bootloader/esp-idf/esp_hal_wdt/libesp_hal_wdt.a(wdt_hal_iram.c.o)
+ .debug_info    0x00026402      0x26b .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(cpu_region_protect.c.o)
+ .debug_info    0x0002666d      0x9b9 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk_init.c.o)
+ .debug_info    0x00027026     0x1bf9 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
+ .debug_info    0x00028c1f      0x2a0 .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_sys.c.o)
+ .debug_info    0x00028ebf      0x425 .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_serial_output.c.o)
+ .debug_info    0x000292e4      0x140 .pio/build/tamago/bootloader/esp-idf/log/liblog.a(log_timestamp.c.o)
+ .debug_info    0x00029424       0xd6 .pio/build/tamago/bootloader/esp-idf/riscv/libriscv.a(rv_utils.c.o)
+ .debug_info    0x000294fa     0x37ed .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
+ .debug_info    0x0002cce7     0x3c22 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
+ .debug_info    0x00030909      0xf7f .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(mmu_hal.c.o)
+ .debug_info    0x00031888     0x1284 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(cache_hal.c.o)
 
-.debug_abbrev   0x00000000     0x5355
+.debug_abbrev   0x00000000     0x54f1
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x26e .pio/build/tamago/bootloader/esp-idf/main/libmain.a(bootloader_start.c.o)
  .debug_abbrev  0x0000026e      0x516 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
  .debug_abbrev  0x00000784      0x240 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(flash_partitions.c.o)
  .debug_abbrev  0x000009c4      0x5f9 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(esp_image_format.c.o)
  .debug_abbrev  0x00000fbd      0x1cd .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_sha.c.o)
- .debug_abbrev  0x0000118a       0x89 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_console_loader.c.o)
- .debug_abbrev  0x00001213       0x80 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_soc.c.o)
- .debug_abbrev  0x00001293      0x3d2 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_esp32c3.c.o)
- .debug_abbrev  0x00001665      0x137 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_panic.c.o)
- .debug_abbrev  0x0000179c      0x2d0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_common_loader.c.o)
- .debug_abbrev  0x00001a6c      0x12c .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_clock_init.c.o)
- .debug_abbrev  0x00001b98       0x65 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_mem.c.o)
- .debug_abbrev  0x00001bfd      0x1ba .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_random.c.o)
- .debug_abbrev  0x00001db7      0x3f4 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_random_esp32c3.c.o)
- .debug_abbrev  0x000021ab      0x590 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash.c.o)
- .debug_abbrev  0x0000273b      0x32d .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32c3.c.o)
- .debug_abbrev  0x00002a68      0x10f .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_reset_common.c.o)
- .debug_abbrev  0x00002b77      0x383 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_init.c.o)
- .debug_abbrev  0x00002efa      0x30a .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_console.c.o)
- .debug_abbrev  0x00003204      0x22d .pio/build/tamago/bootloader/esp-idf/efuse/libefuse.a(esp_efuse_fields.c.o)
- .debug_abbrev  0x00003431       0xaa .pio/build/tamago/bootloader/esp-idf/esp_bootloader_format/libesp_bootloader_format.a(esp_bootloader_desc.c.o)
- .debug_abbrev  0x000034db      0x438 .pio/build/tamago/bootloader/esp-idf/esp_hal_wdt/libesp_hal_wdt.a(wdt_hal_iram.c.o)
- .debug_abbrev  0x00003913       0x90 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(cpu_region_protect.c.o)
- .debug_abbrev  0x000039a3      0x347 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk_init.c.o)
- .debug_abbrev  0x00003cea      0x587 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
- .debug_abbrev  0x00004271      0x1d6 .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_sys.c.o)
- .debug_abbrev  0x00004447       0xf2 .pio/build/tamago/bootloader/esp-idf/log/liblog.a(log_timestamp.c.o)
- .debug_abbrev  0x00004539       0x80 .pio/build/tamago/bootloader/esp-idf/riscv/libriscv.a(rv_utils.c.o)
- .debug_abbrev  0x000045b9      0x210 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
- .debug_abbrev  0x000047c9      0x3c6 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
- .debug_abbrev  0x00004b8f      0x3b7 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(mmu_hal.c.o)
- .debug_abbrev  0x00004f46      0x40f .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(cache_hal.c.o)
+ .debug_abbrev  0x0000118a       0x44 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_console_loader.c.o)
+ .debug_abbrev  0x000011ce       0x80 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_soc.c.o)
+ .debug_abbrev  0x0000124e      0x3d2 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_esp32c3.c.o)
+ .debug_abbrev  0x00001620      0x137 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_panic.c.o)
+ .debug_abbrev  0x00001757      0x2d0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_common_loader.c.o)
+ .debug_abbrev  0x00001a27      0x12c .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_clock_init.c.o)
+ .debug_abbrev  0x00001b53       0x65 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_mem.c.o)
+ .debug_abbrev  0x00001bb8      0x1ba .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_random.c.o)
+ .debug_abbrev  0x00001d72      0x3f4 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_random_esp32c3.c.o)
+ .debug_abbrev  0x00002166      0x590 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash.c.o)
+ .debug_abbrev  0x000026f6      0x32d .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32c3.c.o)
+ .debug_abbrev  0x00002a23      0x10f .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_reset_common.c.o)
+ .debug_abbrev  0x00002b32      0x383 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_init.c.o)
+ .debug_abbrev  0x00002eb5      0x2e8 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_console.c.o)
+ .debug_abbrev  0x0000319d      0x22d .pio/build/tamago/bootloader/esp-idf/efuse/libefuse.a(esp_efuse_fields.c.o)
+ .debug_abbrev  0x000033ca       0xaa .pio/build/tamago/bootloader/esp-idf/esp_bootloader_format/libesp_bootloader_format.a(esp_bootloader_desc.c.o)
+ .debug_abbrev  0x00003474       0xd4 .pio/build/tamago/bootloader/esp-idf/esp_hal_uart/libesp_hal_uart.a(uart_periph.c.o)
+ .debug_abbrev  0x00003548      0x438 .pio/build/tamago/bootloader/esp-idf/esp_hal_wdt/libesp_hal_wdt.a(wdt_hal_iram.c.o)
+ .debug_abbrev  0x00003980       0x90 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(cpu_region_protect.c.o)
+ .debug_abbrev  0x00003a10      0x347 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk_init.c.o)
+ .debug_abbrev  0x00003d57      0x587 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
+ .debug_abbrev  0x000042de      0x1d6 .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_sys.c.o)
+ .debug_abbrev  0x000044b4      0x12f .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_serial_output.c.o)
+ .debug_abbrev  0x000045e3       0xf2 .pio/build/tamago/bootloader/esp-idf/log/liblog.a(log_timestamp.c.o)
+ .debug_abbrev  0x000046d5       0x80 .pio/build/tamago/bootloader/esp-idf/riscv/libriscv.a(rv_utils.c.o)
+ .debug_abbrev  0x00004755      0x210 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
+ .debug_abbrev  0x00004965      0x3c6 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
+ .debug_abbrev  0x00004d2b      0x3b7 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(mmu_hal.c.o)
+ .debug_abbrev  0x000050e2      0x40f .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(cache_hal.c.o)
 
-.debug_line     0x00000000    0x157f9
+.debug_line     0x00000000    0x15b38
  *(.debug_line)
  .debug_line    0x00000000      0x5b1 .pio/build/tamago/bootloader/esp-idf/main/libmain.a(bootloader_start.c.o)
  .debug_line    0x000005b1     0x2848 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
  .debug_line    0x00002df9      0x7be .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(flash_partitions.c.o)
  .debug_line    0x000035b7     0x28ca .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(esp_image_format.c.o)
  .debug_line    0x00005e81      0x43a .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_sha.c.o)
- .debug_line    0x000062bb      0x1d4 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_console_loader.c.o)
- .debug_line    0x0000648f      0x21e .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_soc.c.o)
- .debug_line    0x000066ad      0xbda .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_esp32c3.c.o)
- .debug_line    0x00007287      0x3f1 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_panic.c.o)
- .debug_line    0x00007678      0xb26 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_common_loader.c.o)
- .debug_line    0x0000819e      0x42d .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_clock_init.c.o)
- .debug_line    0x000085cb      0x103 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_mem.c.o)
- .debug_line    0x000086ce      0x54a .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_random.c.o)
- .debug_line    0x00008c18      0xbc9 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_random_esp32c3.c.o)
- .debug_line    0x000097e1     0x1f23 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash.c.o)
- .debug_line    0x0000b704      0xde6 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32c3.c.o)
- .debug_line    0x0000c4ea      0x251 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_reset_common.c.o)
- .debug_line    0x0000c73b      0xd48 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_init.c.o)
- .debug_line    0x0000d483      0x4fd .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_console.c.o)
- .debug_line    0x0000d980      0xba9 .pio/build/tamago/bootloader/esp-idf/efuse/libefuse.a(esp_efuse_fields.c.o)
- .debug_line    0x0000e529      0x1e0 .pio/build/tamago/bootloader/esp-idf/esp_bootloader_format/libesp_bootloader_format.a(esp_bootloader_desc.c.o)
- .debug_line    0x0000e709     0x1442 .pio/build/tamago/bootloader/esp-idf/esp_hal_wdt/libesp_hal_wdt.a(wdt_hal_iram.c.o)
- .debug_line    0x0000fb4b      0x3cf .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(cpu_region_protect.c.o)
- .debug_line    0x0000ff1a      0x814 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk_init.c.o)
- .debug_line    0x0001072e     0x2042 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
- .debug_line    0x00012770      0x3c8 .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_sys.c.o)
- .debug_line    0x00012b38      0x2e6 .pio/build/tamago/bootloader/esp-idf/log/liblog.a(log_timestamp.c.o)
- .debug_line    0x00012e1e      0x1d4 .pio/build/tamago/bootloader/esp-idf/riscv/libriscv.a(rv_utils.c.o)
- .debug_line    0x00012ff2      0x4c7 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
- .debug_line    0x000134b9      0x890 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
- .debug_line    0x00013d49      0xd76 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(mmu_hal.c.o)
- .debug_line    0x00014abf      0xd3a .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(cache_hal.c.o)
+ .debug_line    0x000062bb       0xac .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_console_loader.c.o)
+ .debug_line    0x00006367      0x21e .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_soc.c.o)
+ .debug_line    0x00006585      0xbda .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_esp32c3.c.o)
+ .debug_line    0x0000715f      0x3f1 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_panic.c.o)
+ .debug_line    0x00007550      0xb26 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_common_loader.c.o)
+ .debug_line    0x00008076      0x42d .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_clock_init.c.o)
+ .debug_line    0x000084a3      0x103 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_mem.c.o)
+ .debug_line    0x000085a6      0x54a .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_random.c.o)
+ .debug_line    0x00008af0      0xbc9 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_random_esp32c3.c.o)
+ .debug_line    0x000096b9     0x1f23 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash.c.o)
+ .debug_line    0x0000b5dc      0xde6 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32c3.c.o)
+ .debug_line    0x0000c3c2      0x251 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_reset_common.c.o)
+ .debug_line    0x0000c613      0xd48 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_init.c.o)
+ .debug_line    0x0000d35b      0x438 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_console.c.o)
+ .debug_line    0x0000d793      0xba9 .pio/build/tamago/bootloader/esp-idf/efuse/libefuse.a(esp_efuse_fields.c.o)
+ .debug_line    0x0000e33c      0x1e0 .pio/build/tamago/bootloader/esp-idf/esp_bootloader_format/libesp_bootloader_format.a(esp_bootloader_desc.c.o)
+ .debug_line    0x0000e51c      0x219 .pio/build/tamago/bootloader/esp-idf/esp_hal_uart/libesp_hal_uart.a(uart_periph.c.o)
+ .debug_line    0x0000e735     0x1442 .pio/build/tamago/bootloader/esp-idf/esp_hal_wdt/libesp_hal_wdt.a(wdt_hal_iram.c.o)
+ .debug_line    0x0000fb77      0x3cf .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(cpu_region_protect.c.o)
+ .debug_line    0x0000ff46      0x814 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk_init.c.o)
+ .debug_line    0x0001075a     0x2042 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
+ .debug_line    0x0001279c      0x3c8 .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_sys.c.o)
+ .debug_line    0x00012b64      0x313 .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_serial_output.c.o)
+ .debug_line    0x00012e77      0x2e6 .pio/build/tamago/bootloader/esp-idf/log/liblog.a(log_timestamp.c.o)
+ .debug_line    0x0001315d      0x1d4 .pio/build/tamago/bootloader/esp-idf/riscv/libriscv.a(rv_utils.c.o)
+ .debug_line    0x00013331      0x4c7 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
+ .debug_line    0x000137f8      0x890 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
+ .debug_line    0x00014088      0xd76 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(mmu_hal.c.o)
+ .debug_line    0x00014dfe      0xd3a .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(cache_hal.c.o)
 
-.debug_frame    0x00000000     0x1730
+.debug_frame    0x00000000     0x177c
  *(.debug_frame)
  .debug_frame   0x00000000       0x28 .pio/build/tamago/bootloader/esp-idf/main/libmain.a(bootloader_start.c.o)
  .debug_frame   0x00000028      0x26c .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
@@ -4337,89 +4365,94 @@ LOAD /home/huangk/.platformio/packages/toolchain-riscv32-esp/bin/../riscv32-esp-
  .debug_frame   0x00000ad4      0x100 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32c3.c.o)
  .debug_frame   0x00000bd4       0x2c .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_reset_common.c.o)
  .debug_frame   0x00000c00       0xe4 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_init.c.o)
- .debug_frame   0x00000ce4       0x30 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_console.c.o)
- .debug_frame   0x00000d14       0xbc .pio/build/tamago/bootloader/esp-idf/efuse/libefuse.a(esp_efuse_fields.c.o)
- .debug_frame   0x00000dd0       0x20 .pio/build/tamago/bootloader/esp-idf/esp_bootloader_format/libesp_bootloader_format.a(esp_bootloader_desc.c.o)
- .debug_frame   0x00000df0       0xd4 .pio/build/tamago/bootloader/esp-idf/esp_hal_wdt/libesp_hal_wdt.a(wdt_hal_iram.c.o)
- .debug_frame   0x00000ec4       0x20 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(cpu_region_protect.c.o)
- .debug_frame   0x00000ee4       0x3c .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk_init.c.o)
- .debug_frame   0x00000f20      0x350 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
- .debug_frame   0x00001270       0x8c .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_sys.c.o)
- .debug_frame   0x000012fc       0x30 .pio/build/tamago/bootloader/esp-idf/log/liblog.a(log_timestamp.c.o)
- .debug_frame   0x0000132c       0x20 .pio/build/tamago/bootloader/esp-idf/riscv/libriscv.a(rv_utils.c.o)
- .debug_frame   0x0000134c       0x90 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
- .debug_frame   0x000013dc       0xb8 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
- .debug_frame   0x00001494      0x120 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(mmu_hal.c.o)
- .debug_frame   0x000015b4      0x17c .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(cache_hal.c.o)
+ .debug_frame   0x00000ce4       0x2c .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_console.c.o)
+ .debug_frame   0x00000d10       0xbc .pio/build/tamago/bootloader/esp-idf/efuse/libefuse.a(esp_efuse_fields.c.o)
+ .debug_frame   0x00000dcc       0x20 .pio/build/tamago/bootloader/esp-idf/esp_bootloader_format/libesp_bootloader_format.a(esp_bootloader_desc.c.o)
+ .debug_frame   0x00000dec       0xd4 .pio/build/tamago/bootloader/esp-idf/esp_hal_wdt/libesp_hal_wdt.a(wdt_hal_iram.c.o)
+ .debug_frame   0x00000ec0       0x20 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(cpu_region_protect.c.o)
+ .debug_frame   0x00000ee0       0x3c .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk_init.c.o)
+ .debug_frame   0x00000f1c      0x350 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
+ .debug_frame   0x0000126c       0x8c .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_sys.c.o)
+ .debug_frame   0x000012f8       0x50 .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_serial_output.c.o)
+ .debug_frame   0x00001348       0x30 .pio/build/tamago/bootloader/esp-idf/log/liblog.a(log_timestamp.c.o)
+ .debug_frame   0x00001378       0x20 .pio/build/tamago/bootloader/esp-idf/riscv/libriscv.a(rv_utils.c.o)
+ .debug_frame   0x00001398       0x90 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
+ .debug_frame   0x00001428       0xb8 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
+ .debug_frame   0x000014e0      0x120 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(mmu_hal.c.o)
+ .debug_frame   0x00001600      0x17c .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(cache_hal.c.o)
 
-.debug_str      0x00000000    0x10195
+.debug_str      0x00000000    0x10289
  *(.debug_str)
- .debug_str     0x00000000    0x10195 .pio/build/tamago/bootloader/esp-idf/main/libmain.a(bootloader_start.c.o)
+ .debug_str     0x00000000    0x10289 .pio/build/tamago/bootloader/esp-idf/main/libmain.a(bootloader_start.c.o)
                                 0x786 (size before relaxing)
- .debug_str     0x00010195        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
+ .debug_str     0x00010289        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
                                0x189a (size before relaxing)
- .debug_str     0x00010195        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(flash_partitions.c.o)
+ .debug_str     0x00010289        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(flash_partitions.c.o)
                                 0x5bf (size before relaxing)
- .debug_str     0x00010195        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(esp_image_format.c.o)
+ .debug_str     0x00010289        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(esp_image_format.c.o)
                                0x1a9d (size before relaxing)
- .debug_str     0x00010195        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_sha.c.o)
+ .debug_str     0x00010289        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_sha.c.o)
                                 0x468 (size before relaxing)
- .debug_str     0x00010195        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_console_loader.c.o)
-                                0x2de (size before relaxing)
- .debug_str     0x00010195        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_soc.c.o)
+ .debug_str     0x00010289        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_console_loader.c.o)
+                                0x2b4 (size before relaxing)
+ .debug_str     0x00010289        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_soc.c.o)
                                 0x30c (size before relaxing)
- .debug_str     0x00010195        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_esp32c3.c.o)
+ .debug_str     0x00010289        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_esp32c3.c.o)
                                0x2fcc (size before relaxing)
- .debug_str     0x00010195        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_panic.c.o)
+ .debug_str     0x00010289        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_panic.c.o)
                                 0x341 (size before relaxing)
- .debug_str     0x00010195        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_common_loader.c.o)
+ .debug_str     0x00010289        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_common_loader.c.o)
                                0x10ae (size before relaxing)
- .debug_str     0x00010195        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_clock_init.c.o)
+ .debug_str     0x00010289        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_clock_init.c.o)
                                 0x786 (size before relaxing)
- .debug_str     0x00010195        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_mem.c.o)
+ .debug_str     0x00010289        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_mem.c.o)
                                 0x2cc (size before relaxing)
- .debug_str     0x00010195        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_random.c.o)
+ .debug_str     0x00010289        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_random.c.o)
                                 0x378 (size before relaxing)
- .debug_str     0x00010195        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_random_esp32c3.c.o)
+ .debug_str     0x00010289        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_random_esp32c3.c.o)
                                0x4fd5 (size before relaxing)
- .debug_str     0x00010195        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash.c.o)
+ .debug_str     0x00010289        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash.c.o)
                                0x2aa5 (size before relaxing)
- .debug_str     0x00010195        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32c3.c.o)
+ .debug_str     0x00010289        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32c3.c.o)
                                0x14cf (size before relaxing)
- .debug_str     0x00010195        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_reset_common.c.o)
+ .debug_str     0x00010289        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_reset_common.c.o)
                                 0x567 (size before relaxing)
- .debug_str     0x00010195        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_init.c.o)
+ .debug_str     0x00010289        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_init.c.o)
                                0x37e1 (size before relaxing)
- .debug_str     0x00010195        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_console.c.o)
-                                0xae4 (size before relaxing)
- .debug_str     0x00010195        0x0 .pio/build/tamago/bootloader/esp-idf/efuse/libefuse.a(esp_efuse_fields.c.o)
+ .debug_str     0x00010289        0x0 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_console.c.o)
+                               0x13a2 (size before relaxing)
+ .debug_str     0x00010289        0x0 .pio/build/tamago/bootloader/esp-idf/efuse/libefuse.a(esp_efuse_fields.c.o)
                                 0x7af (size before relaxing)
- .debug_str     0x00010195        0x0 .pio/build/tamago/bootloader/esp-idf/esp_bootloader_format/libesp_bootloader_format.a(esp_bootloader_desc.c.o)
+ .debug_str     0x00010289        0x0 .pio/build/tamago/bootloader/esp-idf/esp_bootloader_format/libesp_bootloader_format.a(esp_bootloader_desc.c.o)
                                 0x34e (size before relaxing)
- .debug_str     0x00010195        0x0 .pio/build/tamago/bootloader/esp-idf/esp_hal_wdt/libesp_hal_wdt.a(wdt_hal_iram.c.o)
+ .debug_str     0x00010289        0x0 .pio/build/tamago/bootloader/esp-idf/esp_hal_uart/libesp_hal_uart.a(uart_periph.c.o)
+                                0xa7d (size before relaxing)
+ .debug_str     0x00010289        0x0 .pio/build/tamago/bootloader/esp-idf/esp_hal_wdt/libesp_hal_wdt.a(wdt_hal_iram.c.o)
                                0x51c5 (size before relaxing)
- .debug_str     0x00010195        0x0 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(cpu_region_protect.c.o)
+ .debug_str     0x00010289        0x0 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(cpu_region_protect.c.o)
                                 0x2cc (size before relaxing)
- .debug_str     0x00010195        0x0 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk_init.c.o)
+ .debug_str     0x00010289        0x0 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk_init.c.o)
                                 0xde1 (size before relaxing)
- .debug_str     0x00010195        0x0 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
+ .debug_str     0x00010289        0x0 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
                                0x1c00 (size before relaxing)
- .debug_str     0x00010195        0x0 .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_sys.c.o)
+ .debug_str     0x00010289        0x0 .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_sys.c.o)
                                 0x3a9 (size before relaxing)
- .debug_str     0x00010195        0x0 .pio/build/tamago/bootloader/esp-idf/log/liblog.a(log_timestamp.c.o)
+ .debug_str     0x00010289        0x0 .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_serial_output.c.o)
+                                0x5f9 (size before relaxing)
+ .debug_str     0x00010289        0x0 .pio/build/tamago/bootloader/esp-idf/log/liblog.a(log_timestamp.c.o)
                                 0x31f (size before relaxing)
- .debug_str     0x00010195        0x0 .pio/build/tamago/bootloader/esp-idf/riscv/libriscv.a(rv_utils.c.o)
+ .debug_str     0x00010289        0x0 .pio/build/tamago/bootloader/esp-idf/riscv/libriscv.a(rv_utils.c.o)
                                 0x2d4 (size before relaxing)
- .debug_str     0x00010195        0x0 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
+ .debug_str     0x00010289        0x0 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
                                0x28d6 (size before relaxing)
- .debug_str     0x00010195        0x0 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
+ .debug_str     0x00010289        0x0 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
                                0x2a72 (size before relaxing)
- .debug_str     0x00010195        0x0 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(mmu_hal.c.o)
+ .debug_str     0x00010289        0x0 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(mmu_hal.c.o)
                                 0x739 (size before relaxing)
- .debug_str     0x00010195        0x0 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(cache_hal.c.o)
+ .debug_str     0x00010289        0x0 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(cache_hal.c.o)
                                 0x951 (size before relaxing)
 
-.debug_loc      0x00000000     0xb727
+.debug_loc      0x00000000     0xb78e
  *(.debug_loc)
  .debug_loc     0x00000000       0xe1 .pio/build/tamago/bootloader/esp-idf/main/libmain.a(bootloader_start.c.o)
  .debug_loc     0x000000e1     0x169b .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
@@ -4435,16 +4468,17 @@ LOAD /home/huangk/.platformio/packages/toolchain-riscv32-esp/bin/../riscv32-esp-
  .debug_loc     0x000069dd      0x337 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32c3.c.o)
  .debug_loc     0x00006d14       0x45 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_reset_common.c.o)
  .debug_loc     0x00006d59      0x170 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_init.c.o)
- .debug_loc     0x00006ec9       0x90 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_console.c.o)
- .debug_loc     0x00006f59      0x30c .pio/build/tamago/bootloader/esp-idf/efuse/libefuse.a(esp_efuse_fields.c.o)
- .debug_loc     0x00007265      0xc6b .pio/build/tamago/bootloader/esp-idf/esp_hal_wdt/libesp_hal_wdt.a(wdt_hal_iram.c.o)
- .debug_loc     0x00007ed0      0x150 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk_init.c.o)
- .debug_loc     0x00008020      0xdce .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
- .debug_loc     0x00008dee      0x149 .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_sys.c.o)
- .debug_loc     0x00008f37       0x38 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
- .debug_loc     0x00008f6f      0x292 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
- .debug_loc     0x00009201      0xfdf .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(mmu_hal.c.o)
- .debug_loc     0x0000a1e0     0x1547 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(cache_hal.c.o)
+ .debug_loc     0x00006ec9       0x42 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_console.c.o)
+ .debug_loc     0x00006f0b      0x30c .pio/build/tamago/bootloader/esp-idf/efuse/libefuse.a(esp_efuse_fields.c.o)
+ .debug_loc     0x00007217      0xc6b .pio/build/tamago/bootloader/esp-idf/esp_hal_wdt/libesp_hal_wdt.a(wdt_hal_iram.c.o)
+ .debug_loc     0x00007e82      0x150 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk_init.c.o)
+ .debug_loc     0x00007fd2      0xdce .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
+ .debug_loc     0x00008da0      0x149 .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_sys.c.o)
+ .debug_loc     0x00008ee9       0xb5 .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_serial_output.c.o)
+ .debug_loc     0x00008f9e       0x38 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
+ .debug_loc     0x00008fd6      0x292 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
+ .debug_loc     0x00009268      0xfdf .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(mmu_hal.c.o)
+ .debug_loc     0x0000a247     0x1547 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(cache_hal.c.o)
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -4452,7 +4486,7 @@ LOAD /home/huangk/.platformio/packages/toolchain-riscv32-esp/bin/../riscv32-esp-
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x00000000     0x1c00
+.debug_ranges   0x00000000     0x1c18
  *(.debug_ranges)
  .debug_ranges  0x00000000       0x28 .pio/build/tamago/bootloader/esp-idf/main/libmain.a(bootloader_start.c.o)
  .debug_ranges  0x00000028      0x210 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_utility.c.o)
@@ -4480,12 +4514,13 @@ LOAD /home/huangk/.platformio/packages/toolchain-riscv32-esp/bin/../riscv32-esp-
  .debug_ranges  0x000011b0       0x28 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk_init.c.o)
  .debug_ranges  0x000011d8      0x430 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
  .debug_ranges  0x00001608       0x48 .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_sys.c.o)
- .debug_ranges  0x00001650       0x28 .pio/build/tamago/bootloader/esp-idf/log/liblog.a(log_timestamp.c.o)
- .debug_ranges  0x00001678       0x10 .pio/build/tamago/bootloader/esp-idf/riscv/libriscv.a(rv_utils.c.o)
- .debug_ranges  0x00001688       0x90 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
- .debug_ranges  0x00001718       0xc0 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
- .debug_ranges  0x000017d8      0x210 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(mmu_hal.c.o)
- .debug_ranges  0x000019e8      0x218 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(cache_hal.c.o)
+ .debug_ranges  0x00001650       0x18 .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_serial_output.c.o)
+ .debug_ranges  0x00001668       0x28 .pio/build/tamago/bootloader/esp-idf/log/liblog.a(log_timestamp.c.o)
+ .debug_ranges  0x00001690       0x10 .pio/build/tamago/bootloader/esp-idf/riscv/libriscv.a(rv_utils.c.o)
+ .debug_ranges  0x000016a0       0x90 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
+ .debug_ranges  0x00001730       0xc0 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
+ .debug_ranges  0x000017f0      0x210 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(mmu_hal.c.o)
+ .debug_ranges  0x00001a00      0x218 .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(cache_hal.c.o)
 
 .debug_weaknames
  *(.debug_weaknames)
@@ -4573,6 +4608,8 @@ LOAD /home/huangk/.platformio/packages/toolchain-riscv32-esp/bin/../riscv32-esp-
                                  0x30 (size before relaxing)
  .comment       0x0000002f        0x0 .pio/build/tamago/bootloader/esp-idf/esp_bootloader_format/libesp_bootloader_format.a(esp_bootloader_desc.c.o)
                                  0x30 (size before relaxing)
+ .comment       0x0000002f        0x0 .pio/build/tamago/bootloader/esp-idf/esp_hal_uart/libesp_hal_uart.a(uart_periph.c.o)
+                                 0x30 (size before relaxing)
  .comment       0x0000002f        0x0 .pio/build/tamago/bootloader/esp-idf/esp_hal_wdt/libesp_hal_wdt.a(wdt_hal_iram.c.o)
                                  0x30 (size before relaxing)
  .comment       0x0000002f        0x0 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(cpu_region_protect.c.o)
@@ -4582,6 +4619,8 @@ LOAD /home/huangk/.platformio/packages/toolchain-riscv32-esp/bin/../riscv32-esp-
  .comment       0x0000002f        0x0 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
                                  0x30 (size before relaxing)
  .comment       0x0000002f        0x0 .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_sys.c.o)
+                                 0x30 (size before relaxing)
+ .comment       0x0000002f        0x0 .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_serial_output.c.o)
                                  0x30 (size before relaxing)
  .comment       0x0000002f        0x0 .pio/build/tamago/bootloader/esp-idf/log/liblog.a(log_timestamp.c.o)
                                  0x30 (size before relaxing)
@@ -4642,6 +4681,8 @@ LOAD /home/huangk/.platformio/packages/toolchain-riscv32-esp/bin/../riscv32-esp-
  .note.GNU-stack
                 0x00000000        0x0 .pio/build/tamago/bootloader/esp-idf/esp_bootloader_format/libesp_bootloader_format.a(esp_bootloader_desc.c.o)
  .note.GNU-stack
+                0x00000000        0x0 .pio/build/tamago/bootloader/esp-idf/esp_hal_uart/libesp_hal_uart.a(uart_periph.c.o)
+ .note.GNU-stack
                 0x00000000        0x0 .pio/build/tamago/bootloader/esp-idf/esp_hal_wdt/libesp_hal_wdt.a(wdt_hal_iram.c.o)
  .note.GNU-stack
                 0x00000000        0x0 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(cpu_region_protect.c.o)
@@ -4651,6 +4692,8 @@ LOAD /home/huangk/.platformio/packages/toolchain-riscv32-esp/bin/../riscv32-esp-
                 0x00000000        0x0 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
  .note.GNU-stack
                 0x00000000        0x0 .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_sys.c.o)
+ .note.GNU-stack
+                0x00000000        0x0 .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_serial_output.c.o)
  .note.GNU-stack
                 0x00000000        0x0 .pio/build/tamago/bootloader/esp-idf/log/liblog.a(log_timestamp.c.o)
  .note.GNU-stack
@@ -4710,27 +4753,31 @@ LOAD /home/huangk/.platformio/packages/toolchain-riscv32-esp/bin/../riscv32-esp-
  .riscv.attributes
                 0x00000608       0x4d .pio/build/tamago/bootloader/esp-idf/esp_bootloader_format/libesp_bootloader_format.a(esp_bootloader_desc.c.o)
  .riscv.attributes
-                0x00000655       0x4d .pio/build/tamago/bootloader/esp-idf/esp_hal_wdt/libesp_hal_wdt.a(wdt_hal_iram.c.o)
+                0x00000655       0x4d .pio/build/tamago/bootloader/esp-idf/esp_hal_uart/libesp_hal_uart.a(uart_periph.c.o)
  .riscv.attributes
-                0x000006a2       0x51 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(cpu_region_protect.c.o)
+                0x000006a2       0x4d .pio/build/tamago/bootloader/esp-idf/esp_hal_wdt/libesp_hal_wdt.a(wdt_hal_iram.c.o)
  .riscv.attributes
-                0x000006f3       0x51 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk_init.c.o)
+                0x000006ef       0x51 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(cpu_region_protect.c.o)
  .riscv.attributes
-                0x00000744       0x4d .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
+                0x00000740       0x51 .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk_init.c.o)
  .riscv.attributes
-                0x00000791       0x4d .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_sys.c.o)
+                0x00000791       0x4d .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
  .riscv.attributes
-                0x000007de       0x51 .pio/build/tamago/bootloader/esp-idf/log/liblog.a(log_timestamp.c.o)
+                0x000007de       0x4d .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_sys.c.o)
  .riscv.attributes
-                0x0000082f       0x4d .pio/build/tamago/bootloader/esp-idf/riscv/libriscv.a(rv_utils.c.o)
+                0x0000082b       0x4d .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_serial_output.c.o)
  .riscv.attributes
-                0x0000087c       0x4d .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
+                0x00000878       0x51 .pio/build/tamago/bootloader/esp-idf/log/liblog.a(log_timestamp.c.o)
  .riscv.attributes
-                0x000008c9       0x4d .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
+                0x000008c9       0x4d .pio/build/tamago/bootloader/esp-idf/riscv/libriscv.a(rv_utils.c.o)
  .riscv.attributes
-                0x00000916       0x4d .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(mmu_hal.c.o)
+                0x00000916       0x4d .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
  .riscv.attributes
-                0x00000963       0x4d .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(cache_hal.c.o)
+                0x00000963       0x4d .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
+ .riscv.attributes
+                0x000009b0       0x4d .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(mmu_hal.c.o)
+ .riscv.attributes
+                0x000009fd       0x4d .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(cache_hal.c.o)
 
 .xtensa.info
  *(.xtensa.info)
@@ -4984,6 +5031,8 @@ ESP_EFUSE_WR_DIS_WAFER_VERSION_MAJOR              .pio/build/tamago/bootloader/e
 ESP_EFUSE_WR_DIS_WAFER_VERSION_MINOR_HI           .pio/build/tamago/bootloader/esp-idf/efuse/libefuse.a(esp_efuse_table.c.o)
 ESP_EFUSE_WR_DIS_WAFER_VERSION_MINOR_LO           .pio/build/tamago/bootloader/esp-idf/efuse/libefuse.a(esp_efuse_table.c.o)
 ESP_EFUSE_WR_DIS_WDT_DELAY_SEL                    .pio/build/tamago/bootloader/esp-idf/efuse/libefuse.a(esp_efuse_table.c.o)
+GPIO                                              .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_console.c.o)
+GetUartDevice                                     .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_serial_output.c.o)
 ROM_Boot_Cache_Init                               .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(mmu_hal.c.o)
 RTCCNTL                                           .pio/build/tamago/bootloader/esp-idf/esp_hal_wdt/libesp_hal_wdt.a(wdt_hal_iram.c.o)
                                                   .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_init.c.o)
@@ -4994,7 +5043,6 @@ SYSTEM                                            .pio/build/tamago/bootloader/e
 TIMERG0                                           .pio/build/tamago/bootloader/esp-idf/esp_hal_wdt/libesp_hal_wdt.a(wdt_hal_iram.c.o)
                                                   .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_init.c.o)
 TIMERG1                                           .pio/build/tamago/bootloader/esp-idf/esp_hal_wdt/libesp_hal_wdt.a(wdt_hal_iram.c.o)
-UART0                                             .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_console.c.o)
 __ashldi3                                         /home/huangk/.platformio/packages/toolchain-riscv32-esp/bin/../riscv32-esp-elf/../picolibc/lib/gcc/riscv32-esp-elf/15.2.0/rv32imc_zicsr_zifencei/ilp32/no-rtti/libgcc.a(_ashldi3.o)
                                                   .pio/build/tamago/bootloader/esp-idf/efuse/libefuse.a(esp_efuse_utility.c.o)
                                                   .pio/build/tamago/bootloader/esp-idf/efuse/libefuse.a(esp_efuse_fields.c.o)
@@ -5016,7 +5064,6 @@ __popcountsi2                                     /home/huangk/.platformio/packa
                                                   .pio/build/tamago/bootloader/esp-idf/efuse/libefuse.a(esp_efuse_fields.c.o)
 __udivdi3                                         /home/huangk/.platformio/packages/toolchain-riscv32-esp/bin/../riscv32-esp-elf/../picolibc/lib/gcc/riscv32-esp-elf/15.2.0/rv32imc_zicsr_zifencei/ilp32/no-rtti/libgcc.a(_udivdi3.o)
                                                   .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk_init.c.o)
-                                                  .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_console.c.o)
 _bss_end                                          .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_init.c.o)
                                                   .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_esp32c3.c.o)
 _bss_start                                        .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_init.c.o)
@@ -5199,6 +5246,7 @@ efuse_hal_blk_version                             .pio/build/tamago/bootloader/e
                                                   .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_init.c.o)
                                                   .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_common_loader.c.o)
 efuse_hal_chip_revision                           .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(efuse_hal.c.o)
+                                                  .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_serial_output.c.o)
                                                   .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_init.c.o)
                                                   .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_common_loader.c.o)
                                                   .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_esp32c3.c.o)
@@ -5375,15 +5423,19 @@ esp_rom_get_reset_reason                          .pio/build/tamago/bootloader/e
                                                   .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_clock_init.c.o)
                                                   .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(esp_image_format.c.o)
                                                   .pio/build/tamago/bootloader/esp-idf/main/libmain.a(bootloader_start.c.o)
+esp_rom_gpio_connect_in_signal                    .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_console.c.o)
 esp_rom_gpio_pad_set_drv                          .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_flash_config_esp32c3.c.o)
 esp_rom_install_channel_putc                      .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_sys.c.o)
-esp_rom_install_uart_printf                       .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_sys.c.o)
                                                   .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_console.c.o)
+esp_rom_install_uart_printf                       .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_sys.c.o)
 esp_rom_md5_final                                 .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(flash_partitions.c.o)
 esp_rom_md5_init                                  .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(flash_partitions.c.o)
 esp_rom_md5_update                                .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(flash_partitions.c.o)
-esp_rom_output_flush_tx                           .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_console_loader.c.o)
 esp_rom_output_putc                               .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_sys.c.o)
+esp_rom_output_set_as_console                     .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_serial_output.c.o)
+                                                  .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_console.c.o)
+esp_rom_output_switch_buffer                      .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_serial_output.c.o)
+                                                  .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_console.c.o)
 esp_rom_output_to_channels                        .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_sys.c.o)
 esp_rom_output_tx_one_char                        .pio/build/tamago/bootloader/esp-idf/esp_rom/libesp_rom.a(esp_rom_sys.c.o)
 esp_rom_output_tx_wait_idle                       .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk_init.c.o)
@@ -5482,7 +5534,6 @@ rtc_clk_8m_enable                                 .pio/build/tamago/bootloader/e
 rtc_clk_8m_enabled                                .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
 rtc_clk_8md256_enabled                            .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
 rtc_clk_apb_freq_get                              .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
-                                                  .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_console.c.o)
                                                   .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_clock_init.c.o)
 rtc_clk_apb_freq_update                           .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
                                                   .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk_init.c.o)
@@ -5513,7 +5564,6 @@ rtc_clk_slow_src_get                              .pio/build/tamago/bootloader/e
 rtc_clk_slow_src_set                              .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
                                                   .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk_init.c.o)
 rtc_clk_xtal_freq_get                             .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
-                                                  .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_console.c.o)
 rtc_clk_xtal_freq_update                          .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
                                                   .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk_init.c.o)
 rtc_dig_8m_enabled                                .pio/build/tamago/bootloader/esp-idf/esp_hw_support/libesp_hw_support.a(rtc_clk.c.o)
@@ -5526,6 +5576,8 @@ rv_utils_dbgr_is_attached                         .pio/build/tamago/bootloader/e
 s_cache_hal_init_ctx                              .pio/build/tamago/bootloader/esp-idf/hal/libhal.a(cache_hal.c.o)
 s_revoke_table                                    .pio/build/tamago/bootloader/esp-idf/efuse/libefuse.a(esp_efuse_api_key.c.o)
 s_table                                           .pio/build/tamago/bootloader/esp-idf/efuse/libefuse.a(esp_efuse_api_key.c.o)
+uart_periph_signal                                .pio/build/tamago/bootloader/esp-idf/esp_hal_uart/libesp_hal_uart.a(uart_periph.c.o)
+                                                  .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_console.c.o)
 wdt_hal_config_stage                              .pio/build/tamago/bootloader/esp-idf/esp_hal_wdt/libesp_hal_wdt.a(wdt_hal_iram.c.o)
                                                   .pio/build/tamago/bootloader/esp-idf/bootloader_support/libbootloader_support.a(bootloader_init.c.o)
 wdt_hal_deinit                                    .pio/build/tamago/bootloader/esp-idf/esp_hal_wdt/libesp_hal_wdt.a(wdt_hal_iram.c.o)
