@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/home/huangk/projects/tamago/.pio/build/tamago/CMakeFiles/bootloader
+/home/huangk/projects/tamago/.pio/build/tamago/CMakeFiles/bootloader.rule
+/home/huangk/projects/tamago/.pio/build/tamago/CMakeFiles/bootloader-complete.rule
+/home/huangk/projects/tamago/.pio/build/tamago/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/home/huangk/projects/tamago/.pio/build/tamago/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/home/huangk/projects/tamago/.pio/build/tamago/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/home/huangk/projects/tamago/.pio/build/tamago/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/home/huangk/projects/tamago/.pio/build/tamago/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/home/huangk/projects/tamago/.pio/build/tamago/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/home/huangk/projects/tamago/.pio/build/tamago/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
