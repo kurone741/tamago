@@ -6,9 +6,9 @@ Functionality includes date/time, timer, stopwatch, countdown, and noise visuali
 
 ps. tamago is japanese for egg
 
-![tamago unrouted pcb 3d](tamago-unrouted-pcb-3d.png)
-![unrouted pcb diagram](tamago-unrouted-pcb.png)
-![tamago schematic finished!](tamago-schematic-finished.png)
+![tamago unrouted pcb 3d](images/tamago-unrouted-pcb-3d.png)
+![unrouted pcb diagram](images/tamago-unrouted-pcb.png)
+![tamago schematic finished!](images/tamago-schematic-finished.png)
 
 ## bill of materials
 | Item | Qty | Supplier | Cost/item | Total Cost | Link |
